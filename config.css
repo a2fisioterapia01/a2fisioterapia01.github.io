@@ -1,0 +1,163 @@
+/* ============================================
+   CONFIGURACIÓN DE VARIABLES CSS
+   ============================================
+   
+   Todas las variables de diseño centralizadas
+   para fácil personalización y mantenimiento.
+============================================ */
+
+:root {
+    /* ========== COLORES PRINCIPALES ========== */
+    --primary-teal: #6a3a88;
+    --primary-teal-light: #8e5ab3;
+    --primary-teal-dark: #4a2563;
+    
+    --accent-orange: #FF7F50;
+    --accent-orange-light: #FF9970;
+    --accent-orange-dark: #E56A3C;
+    
+    --bg-light: #F8FBFB;
+    --bg-white: #FFFFFF;
+    --text-dark: #686868;
+    --text-gray: #6B7280;
+    --text-light: #9CA3AF;
+    
+    /* ========== COLORES SEMÁNTICOS ========== */
+    --success: #10B981;
+    --warning: #F59E0B;
+    --error: #EF4444;
+    --info: #3B82F6;
+    
+    /* ========== TIPOGRAFÍA ========== */
+    --font-primary: 'Inter', sans-serif;
+    --font-heading: 'Inter', sans-serif;
+    
+    /* Tamaños de fuente */
+    --text-xs: 0.75rem;      /* 12px */
+    --text-sm: 0.875rem;     /* 14px */
+    --text-base: 1rem;       /* 16px */
+    --text-lg: 1.125rem;     /* 18px */
+    --text-xl: 1.25rem;      /* 20px */
+    --text-2xl: 1.5rem;      /* 24px */
+    --text-3xl: 1.875rem;    /* 30px */
+    --text-4xl: 2.25rem;     /* 36px */
+    --text-5xl: 3rem;        /* 48px */
+    --text-6xl: 3.75rem;     /* 60px */
+    
+    /* Pesos de fuente */
+    --font-light: 300;
+    --font-normal: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+    --font-extrabold: 800;
+    
+    /* ========== ESPACIADO ========== */
+    --space-1: 0.25rem;   /* 4px */
+    --space-2: 0.5rem;    /* 8px */
+    --space-3: 0.75rem;   /* 12px */
+    --space-4: 1rem;      /* 16px */
+    --space-5: 1.25rem;   /* 20px */
+    --space-6: 1.5rem;    /* 24px */
+    --space-8: 2rem;      /* 32px */
+    --space-10: 2.5rem;   /* 40px */
+    --space-12: 3rem;     /* 48px */
+    --space-16: 4rem;     /* 64px */
+    --space-20: 5rem;     /* 80px */
+    --space-24: 6rem;     /* 96px */
+    
+    /* ========== BORDES Y RADIO ========== */
+    --radius-sm: 0.25rem;   /* 4px */
+    --radius-md: 0.5rem;    /* 8px */
+    --radius-lg: 0.75rem;   /* 12px */
+    --radius-xl: 1rem;      /* 16px */
+    --radius-2xl: 1.5rem;   /* 24px */
+    --radius-full: 9999px;
+    
+    --border-width: 1px;
+    --border-width-2: 2px;
+    --border-width-4: 4px;
+    
+    /* ========== SOMBRAS ========== */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    
+    /* Sombras con color */
+    --shadow-teal: 0 10px 25px -5px rgba(32, 178, 170, 0.3);
+    --shadow-orange: 0 10px 25px -5px rgba(255, 127, 80, 0.4);
+    
+    /* ========== TRANSICIONES ========== */
+    --transition-fast: 150ms;
+    --transition-base: 300ms;
+    --transition-slow: 500ms;
+    
+    --ease-in: cubic-bezier(0.4, 0, 1, 1);
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* ========== Z-INDEX ========== */
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-fixed: 1030;
+    --z-modal-backdrop: 1040;
+    --z-modal: 1050;
+    --z-popover: 1060;
+    --z-tooltip: 1070;
+    
+    /* ========== BREAKPOINTS (para referencia) ========== */
+    /* sm: 640px */
+    /* md: 768px */
+    /* lg: 1024px */
+    /* xl: 1280px */
+    /* 2xl: 1536px */
+    
+    /* ========== CONTENEDOR ========== */
+    --container-sm: 640px;
+    --container-md: 768px;
+    --container-lg: 1024px;
+    --container-xl: 1280px;
+    --container-2xl: 1536px;
+    
+    /* ========== GRADIENTES ========== */
+    --gradient-primary: linear-gradient(135deg, var(--primary-teal) 0%, var(--primary-teal-dark) 100%);
+    --gradient-accent: linear-gradient(135deg, var(--accent-orange) 0%, var(--accent-orange-dark) 100%);
+    --gradient-overlay: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+/* ========== MODO OSCURO (OPCIONAL) ========== */
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Descomenta estas líneas para activar modo oscuro automático */
+        /*
+        --bg-white: #1F2937;
+        --bg-light: #111827;
+        --text-dark: #F9FAFB;
+        --text-gray: #D1D5DB;
+        --text-light: #9CA3AF;
+        */
+    }
+}
+
+/* ========== CLASES DE UTILIDAD PERSONALIZADAS ========== */
+
+/* Aplicar variables de color */
+.bg-primary { background-color: var(--primary-teal); }
+.bg-accent { background-color: var(--accent-orange); }
+.text-primary { color: var(--primary-teal); }
+.text-accent { color: var(--accent-orange); }
+
+/* Aplicar sombras con color */
+.shadow-primary { box-shadow: var(--shadow-teal); }
+.shadow-accent { box-shadow: var(--shadow-orange); }
+
+/* Aplicar gradientes */
+.gradient-primary { background: var(--gradient-primary); }
+.gradient-accent { background: var(--gradient-accent); }
+
+/* Transiciones */
+.transition-fast { transition: all var(--transition-fast) var(--ease-out); }
+.transition-base { transition: all var(--transition-base) var(--ease-out); }
+.transition-slow { transition: all var(--transition-slow) var(--ease-out); }

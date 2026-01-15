@@ -1,0 +1,77 @@
+<!-- ============================================
+     SECCIÓN CONTACTO Y UBICACIÓN
+     ============================================ -->
+<section id="contacto" class="py-16 sm:py-24 bg-primary-teal text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 data-aos="fade-down" class="text-4xl font-extrabold text-center mb-12">
+            ¿Listo para empezar tu recuperación?
+        </h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Formulario de Contacto -->
+            <div data-aos="fade-right" data-aos-delay="200" class="bg-white p-8 rounded-xl shadow-2xl text-text-dark">
+                <h3 class="text-2xl font-bold mb-4">Solicita tu Cita y Actívate</h3>
+                <form>
+                    <div class="mb-4">
+                        <label for="nombre" class="block text-sm font-medium mb-1">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary-teal focus:border-primary-teal" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="servicio" class="block text-sm font-medium mb-1">Servicio de Interés</label>
+                        <select id="servicio" name="servicio" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary-teal focus:border-primary-teal bg-white" required>
+                            <option value="" disabled selected>Selecciona un servicio</option>
+                            <option value="Tratamiento Personalizado">Tratamiento Personalizado</option>
+                            <option value="Pilates">Pilates (Suelo y Máquinas)</option>
+                            <option value="Lesiones Deportivas">Lesiones Deportivas</option>
+                            <option value="Tecnología Avanzada">Tecnología Avanzada (Ecografía/EPI)</option>
+                            <option value="Domicilio">Fisioterapia a Domicilio</option>
+                            <option value="Otro">Otro / Información General</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="motivo" class="block text-sm font-medium mb-1">Motivo de la Consulta (Breve)</label>
+                        <textarea id="motivo" name="motivo" rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary-teal focus:border-primary-teal" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-primary-teal text-white py-3 rounded-xl font-bold text-lg shadow-md hover:bg-primary-teal-dark transition duration-300">
+                        Enviar Solicitud
+                    </button>
+                </form>
+            </div>
+
+            <!-- Información de Contacto y Ubicación -->
+            <div data-aos="fade-left" data-aos-delay="200" class="flex flex-col space-y-8">
+                <!-- Mapa -->
+                <div class="bg-white h-64 rounded-xl shadow-2xl overflow-hidden">
+                    <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3104.6375782489836!2d-3.6631291242503354!3d38.9094023717214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd695de8ee59e237%3A0xadbab6eb67a8387c!2sCl%C3%ADnica%20A2%20Fisioterapia!5e0!3m2!1ses!2ses!4v1768340040788!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+
+                <!-- Detalles de Contacto -->
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-4">
+                        <span class="text-white text-2xl w-10 text-center flex-shrink-0"><i class="fas fa-map-marker-alt"></i></span>
+                        <div>
+                            <h4 class="text-xs uppercase tracking-widest text-white/60 mb-1">Dirección</h4>
+                            <p class="text-lg font-medium text-white leading-tight">C. Sancho Panza, 9, 13260 Bolaños de Calatrava, Ciudad Real</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <span class="text-white text-2xl w-10 text-center flex-shrink-0"><i class="fas fa-phone-alt"></i></span>
+                        <div>
+                            <h4 class="text-xs uppercase tracking-widest text-white/60 mb-1">Teléfono</h4>
+                            <p class="text-lg font-medium text-white">+34 643 567 201</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <span class="text-white text-2xl w-10 text-center flex-shrink-0"><i class="fas fa-clock"></i></span>
+                        <div>
+                            <h4 class="text-xs uppercase tracking-widest text-white/60 mb-1">Horario</h4>
+                            <p class="text-lg font-medium text-white">Lunes a Viernes: 9:00 - 21:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
