@@ -154,20 +154,3 @@ html {
 .shadow-custom-lg {
     box-shadow: 0 10px 15px -3px rgba(106, 58, 136, 0.2), 0 4px 6px -2px rgba(106, 58, 136, 0.1);
 }
-
-/* ============================================
-   SWIPER PAGINATION CUSTOMIZATION
-   ============================================ */
-.swiper-pagination-bullet {
-    background-color: #d1d5db !important; /* gris claro por defecto */
-    opacity: 0.6 !important;
-    width: 10px !important;
-    height: 10px !important;
-    transition: all 0.3s ease;
-}
-
-/* El punto activo usa el color morado de la app */
-.swiper-pagination-bullet-active {
-    background-color: var(--primary-teal) !important;
-    opacity: 1 !important;
-}
