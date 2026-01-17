@@ -40,6 +40,9 @@ function updateWhatsAppLinks() {
 document.addEventListener('sectionsLoaded', function() {
     updateWhatsAppLinks();
     
+    // Inicializar Swipers
+    initSwipers();
+
     // Inicializar AOS con configuración global
     AOS.init({
         duration: 800,
@@ -47,6 +50,42 @@ document.addEventListener('sectionsLoaded', function() {
         offset: 100
     });
 });
+
+function initSwipers() {
+    if (typeof Swiper === 'undefined') {
+        console.warn('Swiper no está cargado');
+        return;
+    }
+
+    // Inicializar carrusel de testimonios
+    if (document.querySelector('.testimonials-swiper')) {
+        new Swiper('.testimonials-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true, // Loop infinito
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+            },
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+        });
+    }
+}
+
 
 
 /* ============================================

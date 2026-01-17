@@ -34,6 +34,9 @@
     <link rel="stylesheet" href="config.css">
     <link rel="stylesheet" href="styles.css">
 
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
@@ -123,6 +126,12 @@
 
     <!-- Contenedor para la sección "Equipo" -->
     <div id="about-placeholder"></div>
+
+    <!-- Contenedor para la sección "Testimonios" -->
+    <div id="testimonials-placeholder"></div>
+
+    <!-- Contenedor para la sección "Instagram" -->
+    <div id="instagram-placeholder"></div>
     
     <!-- Contenedor para la sección "Contacto" -->
     <div id="contact-placeholder"></div>
@@ -143,8 +152,31 @@
     </a>
     
     <!-- Scripts -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="sections-loader.js"></script>
+    <script src="instagram-feed.js"></script>
     <script src="script.js"></script>
+
+    <!-- Google Reviews Script -->
+    <script src="google-reviews.js"></script>
+    
+    <!-- 
+      CONFIGURACIÓN GOOGLE REVIEWS: 
+      1. Obtén tu API KEY en Google Cloud Platform (habilitar Places API y Maps JS API).
+      2. Descomenta la siguiente línea y reemplaza TU_API_KEY.
+    -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&libraries=places&callback=initGoogleReviews" async defer></script> -->
+
+    <!-- Si no usas el callback de la URL, iniciamos manual al cargar secciones -->
+    <script>
+        document.addEventListener('sectionsLoaded', function() {
+            // Solo intentar iniciar si la librería de google maps se cargó (si descomentas la línea de arriba)
+            if (typeof initGoogleReviews === 'function') {
+                initGoogleReviews();
+            }
+        });
+    </script>
 
     <!-- AOS Animation Library JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
