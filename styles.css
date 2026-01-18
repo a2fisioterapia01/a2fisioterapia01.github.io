@@ -151,6 +151,15 @@ html {
     box-shadow: 0 4px 6px -1px rgba(106, 58, 136, 0.1), 0 2px 4px -1px rgba(106, 58, 136, 0.06);
 }
 
-.shadow-custom-lg {
-    box-shadow: 0 10px 15px -3px rgba(106, 58, 136, 0.2), 0 4px 6px -2px rgba(106, 58, 136, 0.1);
+
+/* ============================================
+   FOOTER - OVERRIDES
+   ============================================ */
+footer a, footer button {
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+footer a:focus, footer button:focus {
+    outline: none !important;
+    box-shadow: none !important;
 }
