@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Servicios completos de A2 Fisioterapia - Descubre todos nuestros tratamientos, horarios y especialidades.">
+    <title>Servicios Completos - A2 Fisioterapia</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Configuración de Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-teal': '#6a3a88',
+                        'primary-teal-dark': '#4a2563',
+                        'bg-light': '#F8FBFB',
+                        'text-dark': '#686868',
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="config.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-bg-light text-text-dark antialiased">
+
+    <!-- ============================================
+         HEADER
+         ============================================ -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <a href="index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
+                    <img src="assets/logo.png" alt="A2 Fisioterapia" class="h-16 w-auto">
+                </a>
+            </div>
+    
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html#hero" class="text-text-dark hover:text-primary-teal transition duration-300 font-medium">Inicio</a>
+                <a href="index.html#servicios" class="text-text-dark hover:text-primary-teal transition duration-300 font-medium">Servicios</a>
+                <a href="index.html#equipo" class="text-text-dark hover:text-primary-teal transition duration-300 font-medium">Conócenos</a>
+                <a href="index.html#contacto" class="text-text-dark hover:text-primary-teal transition duration-300 font-medium">Contacto</a>
+            </div>
+
+            <div class="hidden md:flex items-center space-x-6">
+                <div class="flex items-center space-x-5">
+                    <a href="https://www.instagram.com/a2fisioterapia_/" class="text-gray-600 hover:text-[#6a3a88] transition" target="_blank">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
+                <a href="index.html#contacto" class="bg-primary-teal text-white py-2 px-4 rounded-full shadow-lg hover:bg-primary-teal-dark transition duration-300 font-semibold">
+                    Pedir Cita
+                </a>
+            </div>
+    
+            <button id="menu-button" class="md:hidden p-2 text-text-dark focus:outline-none">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- ============================================
+         HERO / ENCABEZADO
+         ============================================ -->
+    <section class="py-16 sm:py-24 bg-gradient-to-r from-primary-teal to-primary-teal-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-5xl font-extrabold mb-4">Nuestros Servicios en Detalle</h1>
+            <p class="text-lg text-purple-100 max-w-3xl mx-auto">
+                Descubre todos nuestros tratamientos especializados, horarios y testimonios de pacientes que han transformado su vida.
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SERVICIOS DETALLADOS
+         ============================================ -->
+    <section class="py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-16 text-text-dark">Nuestras Especialidades</h2>
+
+            <!-- Grid de servicios con detalles -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+                
+                <!-- Servicio 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-50">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 flex items-center justify-center rounded-2xl bg-[#f3eef6] text-primary-teal text-2xl">
+                            <i class="fas fa-hand-holding-medical"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Tratamientos Personalizados</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Cada paciente es único, por eso diseñamos planes de tratamiento que se adaptan específicamente a tus necesidades y objetivos. Nuestros fisioterapeutas realizan una evaluación exhaustiva para garantizar resultados óptimos.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><i class="fas fa-check text-primary-teal mr-2"></i>Valoración inicial completa</li>
+                        <li><i class="fas fa-check text-primary-teal mr-2"></i>Plan personalizado</li>
+                        <li><i class="fas fa-check text-primary-teal mr-2"></i>Seguimiento continu</li>
+                    </ul>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-50">
+                    <div id="pilates" class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 flex items-center justify-center rounded-2xl bg-[#f3eef6] text-primary-teal text-2xl">
+                            <i class="fas fa-spa"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Pilates Máquinas + Suelo</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Combina la precisión de nuestro equipamiento especializado con ejercicios en suelo para mejorar tu postura, fuerza y flexibilidad de forma integral.
+                    </p>
+                    <div class="bg-purple-50 p-4 rounded-lg mt-4">
+                        <p class="font-semibold text-primary-teal mb-4">Horario de Pilates (semana)</p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm text-gray-700">
+                            <div class="bg-white p-3 rounded-lg shadow-sm">
+                                <h4 class="font-semibold mb-2">Lunes</h4>
+                                <ul class="space-y-1">
+                                    <li>09:15</li>
+                                    <li>18:15</li>
+                                    <li>19:15</li>
+                                    <li>20:15</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-white p-3 rounded-lg shadow-sm">
+                                <h4 class="font-semibold mb-2">Martes</h4>
+                                <ul class="space-y-1">
+                                    <li>09:15</li>
+                                    <li>18:15</li>
+                                    <li>19:15</li>
+                                    <li>20:15</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-white p-3 rounded-lg shadow-sm">
+                                <h4 class="font-semibold mb-2">Miércoles</h4>
+                                <ul class="space-y-1">
+                                    <li>09:15</li>
+                                    <li>18:15</li>
+                                    <li>19:15</li>
+                                    <li>20:15</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-white p-3 rounded-lg shadow-sm">
+                                <h4 class="font-semibold mb-2">Jueves</h4>
+                                <ul class="space-y-1">
+                                    <li>09:15</li>
+                                    <li>18:15</li>
+                                    <li>19:15</li>
+                                    <li>20:15</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <p class="text-xs text-gray-500 mt-3">Sesiones de 60 minutos · Reserva previa requerida</p>
+                    </div>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-50">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 flex items-center justify-center rounded-2xl bg-[#f3eef6] text-primary-teal text-2xl">
+                            <i class="fas fa-wave-square"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Tecnología Avanzada</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Utilizamos los últimos avances tecnológicos para optimizar tu recuperación y acelerar resultados.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><i class="fas fa-check text-primary-teal mr-2"></i>Ecografía terapéutica</li>
+                        <li><i class="fas fa-check text-primary-teal mr-2"></i>Neuromodulación</li>
+                        <li><i class="fas fa-check text-primary-teal mr-2"></i>EPI (Electrólisis de plasma)</li>
+                    </ul>
+                </div>
+
+                <!-- Servicio 4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-50">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 flex items-center justify-center rounded-2xl bg-[#f3eef6] text-primary-teal text-2xl">
+                            <i class="fas fa-running"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Lesiones Deportivas</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Recuperación integral y readaptación funcional para atletas que desean volver a competir con seguridad y rendimiento máximo.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><i class="fas fa-check text-primary-teal mr-2"></i>Análisis biomecánico</li>
+                        <li><i class="fas fa-check text-primary-teal mr-2"></i>Programa de readaptación</li>
+                        <li><i class="fas fa-check text-primary-teal mr-2"></i>Entrenamiento preventivo</li>
+                    </ul>
+                </div>
+
+                <!-- Servicio 5 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-50">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 flex items-center justify-center rounded-2xl bg-[#f3eef6] text-primary-teal text-2xl">
+                            <i class="fas fa-bandage"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Rehabilitación Postquirúrgica</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Acompañamiento completo antes y después de cirugías para recuperar movilidad, fuerza y funcionalidad de forma segura.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><i class="fas fa-check text-primary-teal mr-2"></i>Pre y postoperatorio</li>
+                        <li><i class="fas fa-check text-primary-teal mr-2"></i>Protocolos especializados</li>
+                        <li><i class="fas fa-check text-primary-teal mr-2"></i>Coordinación médica</li>
+                    </ul>
+                </div>
+
+                <!-- Servicio 6 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-50">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 flex items-center justify-center rounded-2xl bg-[#f3eef6] text-primary-teal text-2xl">
+                            <i class="fas fa-house-medical"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Fisioterapia a Domicilio</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        No siempre puedes desplazarte. Por eso llevamos nuestro servicio a tu hogar para máxima comodidad y continuidad en tu recuperación.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><i class="fas fa-check text-primary-teal mr-2"></i>Atención personalizada en casa</li>
+                        <li><i class="fas fa-check text-primary-teal mr-2"></i>Horarios flexibles</li>
+                        <li><i class="fas fa-check text-primary-teal mr-2"></i>Equipamiento portátil</li>
+                    </ul>
+                </div>
+
+                <!-- Servicio 7: Nutrición -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-2 border-primary-teal">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 flex items-center justify-center rounded-2xl bg-primary-teal text-white text-2xl">
+                            <i class="fas fa-apple-alt"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Nutrición <span class="text-primary-teal text-sm font-semibold">(SERVICIO ESPECIALIZADO)</span></h3>
+                    </div>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Complementa tu recuperación con asesoramiento nutricional profesional. A2 Fisioterapia cuenta con nutricionista especializada para optimizar tu bienestar y acelerar resultados.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><i class="fas fa-check text-primary-teal mr-2"></i>Planes nutricionales personalizados</li>
+                        <li><i class="fas fa-check text-primary-teal mr-2"></i>Coordinación con tratamiento</li>
+                        <li><i class="fas fa-check text-primary-teal mr-2"></i>Seguimiento continuo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CARRUSEL DE IMÁGENES
+         ============================================ -->
+    <section class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-12 text-text-dark">Nuestras Instalaciones</h2>
+            
+            <div class="swiper servicesGallery rounded-2xl overflow-hidden shadow-2xl">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/home.png" alt="Centro de fisioterapia 1" class="w-full h-96 object-cover">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/equipo.png" alt="Centro de fisioterapia 2" class="w-full h-96 object-cover">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/home.png" alt="Centro de fisioterapia 3" class="w-full h-96 object-cover">
+                    </div>
+                </div>
+                <div class="swiper-button-prev bg-primary-teal rounded-full w-12 h-12 flex items-center justify-center text-white shadow-lg hover:bg-primary-teal-dark"></div>
+                <div class="swiper-button-next bg-primary-teal rounded-full w-12 h-12 flex items-center justify-center text-white shadow-lg hover:bg-primary-teal-dark"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         LLAMADA A LA ACCIÓN
+         ============================================ -->
+    <section class="py-16 sm:py-24 bg-gradient-to-r from-primary-teal to-primary-teal-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold mb-6">¿Listo para Avanzar?</h2>
+            <p class="text-lg text-purple-100 mb-8 max-w-2xl mx-auto">
+                Contacta con nosotros hoy y diseñaremos el tratamiento perfecto para ti.
+            </p>
+            <a href="index.html#contacto" class="inline-flex items-center bg-white text-primary-teal py-3 px-8 rounded-xl text-lg font-bold shadow-xl hover:bg-gray-100 transition duration-300 hover:-translate-y-1">
+                <i class="fas fa-phone mr-2"></i>Agendar una Consulta
+            </a>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <img src="assets/logo.png" alt="A2 Fisioterapia" class="h-12 w-auto mb-4">
+                    <p class="text-gray-400">Avanza y Actívate con nuestro equipo de expertos.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html#hero" class="hover:text-white transition">Inicio</a></li>
+                        <li><a href="index.html#servicios" class="hover:text-white transition">Servicios</a></li>
+                        <li><a href="index.html#equipo" class="hover:text-white transition">Equipo</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Síguenos</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/a2fisioterapia_/" target="_blank" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-gray-700 my-8">
+            <div class="text-center text-gray-400 text-sm">
+                <p>&copy; 2026 A2 Fisioterapia. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inicializar Swiper para galería
+        const swiper = new Swiper('.servicesGallery', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            }
+        });
+
+        // Inicializar AOS
+        AOS.init({
+            duration: 800,
+            once: false
+        });
+    </script>
+</body>
+</html>
