@@ -1,0 +1,79 @@
+<!-- ============================================
+     HEADER - BARRA DE NAVEGACIÓN
+     ============================================ -->
+<header class="bg-white shadow-lg sticky top-0 z-50">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+        <!-- Logo y marca -->
+        <div class="flex items-center space-x-2">
+            <a href="index.html">
+                <img src="assets/logo.png" alt="A2 Fisioterapia" class="h-16 w-auto">
+            </a>
+        </div>
+
+        <!-- Navegación Desktop -->
+        <div class="hidden md:flex items-center space-x-8">
+            <a href="index.html#hero" class="text-text-dark hover:text-primary-teal transition duration-300 font-medium">Inicio</a>
+            <a href="index.html#servicios" class="text-text-dark hover:text-primary-teal transition duration-300 font-medium">Servicios</a>
+            <a href="index.html#equipo" class="text-text-dark hover:text-primary-teal transition duration-300 font-medium">Conócenos</a>
+            <a href="index.html#convenios" class="text-text-dark hover:text-primary-teal transition duration-300 font-medium">Convenios</a>
+            <a href="index.html#contacto" class="text-text-dark hover:text-primary-teal transition duration-300 font-medium">Contacto</a>
+        </div>
+
+        <!-- Acciones Desktop (Redes + CTA) -->
+        <div class="hidden md:flex items-center space-x-6">
+            <!-- Redes Sociales Desktop -->
+            <div class="flex items-center space-x-5">
+                <a href="#" class="text-gray-600 hover:text-[#6a3a88] hover:scale-110 transition duration-300" aria-label="Facebook" target="_blank">
+                    <i class="fab fa-facebook-f text-xl"></i>
+                </a>
+                <a href="https://www.instagram.com/a2fisioterapia_/" class="text-gray-600 hover:text-[#6a3a88] hover:scale-110 transition duration-300" aria-label="Instagram" target="_blank">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+                <a href="#" data-whatsapp-link class="text-gray-600 hover:text-[#6a3a88] hover:scale-110 transition duration-300" aria-label="WhatsApp" target="_blank">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                </a>
+            </div>
+    
+            <!-- Botón CTA Desktop -->
+            <a href="index.html#contacto" class="bg-primary-teal text-white py-2 px-4 rounded-full shadow-lg hover:bg-primary-teal-dark transition duration-300 font-semibold">
+                Pedir Cita
+            </a>
+        </div>
+
+        <!-- Botón menú móvil -->
+        <button id="menu-button" class="md:hidden p-2 text-text-dark focus:outline-none">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Menú Móvil -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-inner pb-4">
+        <a href="index.html#hero" class="block px-4 py-2 text-text-dark hover:bg-bg-light">Inicio</a>
+        <a href="index.html#servicios" class="block px-4 py-2 text-text-dark hover:bg-bg-light">Servicios</a>
+        <a href="index.html#equipo" class="block px-4 py-2 text-text-dark hover:bg-bg-light">Equipo</a>
+        <a href="index.html#convenios" class="block px-4 py-2 text-text-dark hover:bg-bg-light">Convenios</a>
+        <a href="index.html#contacto" class="block px-4 py-2 text-text-dark hover:bg-bg-light">Contacto</a>
+        
+        <div class="border-t border-gray-200 mt-2 pt-4 px-4 flex items-center justify-between">
+            <!-- Redes Sociales Móvil -->
+            <div class="flex items-center space-x-6">
+                <a href="#" class="text-gray-600 hover:text-[#6a3a88] hover:scale-110 transition duration-300" aria-label="Facebook" target="_blank">
+                    <i class="fab fa-facebook-f text-xl"></i>
+                </a>
+                <a href="https://www.instagram.com/a2fisioterapia_/" class="text-gray-600 hover:text-[#6a3a88] hover:scale-110 transition duration-300" aria-label="Instagram" target="_blank">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+                <a href="#" data-whatsapp-link class="text-gray-600 hover:text-[#6a3a88] hover:scale-110 transition duration-300" aria-label="WhatsApp" target="_blank">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                </a>
+            </div>
+
+            <!-- Botón CTA Móvil -->
+            <a href="index.html#contacto" class="bg-primary-teal text-white px-4 py-2 rounded-lg font-semibold hover:bg-primary-teal-dark transition duration-300 text-sm">
+                Pedir Cita
+            </a>
+        </div>
+    </div>
+</header>

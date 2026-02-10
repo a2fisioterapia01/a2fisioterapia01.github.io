@@ -49,6 +49,9 @@ document.addEventListener('sectionsLoaded', function() {
         once: true,
         offset: 100
     });
+    
+    // Manejar scroll a sección si hay hash en la URL
+    handleHashNavigation();
 });
 
 function initSwipers() {
@@ -345,6 +348,27 @@ function initializeSmoothScroll() {
             }
         });
     });
+}
+
+/**
+ * Maneja la navegación cuando hay un hash en la URL
+ * Se ejecuta después de que las secciones se cargan
+ */
+function handleHashNavigation() {
+    if (window.location.hash) {
+        // Pequeño delay para asegurar que todas las secciones estén renderizadas
+        setTimeout(() => {
+            const targetId = window.location.hash;
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }, 300);
+    }
 }
 
 /* ============================================

@@ -96,7 +96,7 @@ document.addEventListener('sectionsLoaded', function() {
                 { 
                     media_type: 'IMAGE', 
                     // Usamos la foto del equipo local como ejemplo para "Fisioterapia a domicilio"
-                    media_url: 'assets/equipo.png', 
+                    media_url: 'assets/equipo.jpg', 
                     permalink: 'https://www.instagram.com/a2fisioterapia_/', 
                     caption: 'FISIOTERAPIA A DOMICILIO 🚗🏠 Empezamos a cuidarte antes de abrir la clínica. ¡Reserva tu cita desde hoy! 📲 643567201' 
                 },
@@ -110,7 +110,7 @@ document.addEventListener('sectionsLoaded', function() {
                 { 
                     media_type: 'IMAGE', 
                     // Reciclamos foto equipo para "Conócenos"
-                    media_url: 'assets/equipo.png', 
+                    media_url: 'assets/equipo.jpg', 
                     permalink: 'https://www.instagram.com/a2fisioterapia_/', 
                     caption: 'CONÓCENOS 👋 Equipo A2 Fisioterapia. ALBA y ANTONIO. Estamos aquí para ayudarte a avanzar y activarte.' 
                 },
@@ -136,7 +136,7 @@ document.addEventListener('sectionsLoaded', function() {
                 },
                 { 
                     media_type: 'IMAGE', 
-                    media_url: 'assets/equipo.png', 
+                    media_url: 'assets/equipo.jpg', 
                     permalink: 'https://www.instagram.com/a2fisioterapia_/', 
                     caption: 'Nuestro compromiso es tu salud. Pregúntanos cualquier duda. 💬' 
                 },

@@ -3,24 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
     <title>Aviso Legal - A2 Fisioterapia</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind-config.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary-teal': '#6a3a88',
-                        'primary-teal-dark': '#4a2563',
-                        'accent-orange': '#6a3a88',
-                        'bg-light': '#F8FBFB',
-                        'text-dark': '#686868',
-                    },
-                }
-            }
-        }
-    </script>
     <link rel="stylesheet" href="config.css">
     <link rel="stylesheet" href="styles.css">
 
@@ -29,17 +17,8 @@
 </head>
 <body class="bg-bg-light text-text-dark antialiased">
 
-    <!-- Header Simplificado -->
-    <header class="bg-white shadow-lg sticky top-0 z-50">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-2">
-                <img src="assets/logo.png" alt="A2 Fisioterapia" class="h-16 w-auto">
-            </a>
-            <a href="index.html" class="text-primary-teal font-medium hover:text-primary-teal-dark flex items-center gap-2">
-                <i class="fas fa-arrow-left"></i> Volver al inicio
-            </a>
-        </nav>
-    </header>
+    <!-- Contenedor para el header -->
+    <div id="header-placeholder"></div>
 
     <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <h1 class="text-3xl md:text-4xl font-bold text-primary-teal mb-8">Aviso Legal</h1>
@@ -47,23 +26,36 @@
         <div class="prose text-gray-600 max-w-none space-y-6">
             <section>
                 <h2 class="text-xl font-bold text-gray-800 mb-2">1. Información Identificativa y Administrativa</h2>
-                <p>En cumplimiento con el deber de información recogido en artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico, así como la normativa sanitaria vigente en Castilla-La Mancha, a continuación se reflejan los siguientes datos:</p>
+                <p>En cumplimiento con el deber de información recogido en artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico, a continuación se reflejan los siguientes datos:</p>
                 <ul class="list-disc pl-5 mt-2 space-y-1">
-                    <li><strong>Titular:</strong> A2 Fisioterapia (Nombre Fiscal o Razón Social)</li>
-                    <li><strong>NIF/CIF:</strong> [COMPLETAR CON NIF/CIF]</li>
+                    <li><strong>Denominación:</strong> A2 Fisioterapia</li>
                     <li><strong>Domicilio:</strong> C. Sancho Panza, 9, 13260 Bolaños de Calatrava, Ciudad Real</li>
                     <li><strong>Correo electrónico:</strong> a2fisioterapia01@gmail.com</li>
                     <li><strong>Teléfono:</strong> +34 643 567 201</li>
-                    <li><strong>Registro Sanitario (N.R.S.):</strong> [COMPLETAR NÚMERO REGISTRO SANITARIO C-LM]</li>
-                    <li><strong>Datos Profesionales:</strong>
-                        <ul class="list-circle pl-5 mt-1">
-                            <li>Colegio Profesional: Ilustre Colegio Profesional de Fisioterapeutas de Castilla-La Mancha.</li>
-                            <li>Número de Colegiado: [COMPLETAR NÚMERO]</li>
-                            <li>Título académico: Graduado/Diplomado en Fisioterapia (Título oficial expedido en España).</li>
-                            <li>Normas profesionales aplicables: Código deontológico del Colegio de Fisioterapeutas de Castilla-La Mancha.</li>
-                        </ul>
-                    </li>
                 </ul>
+                
+                <h3 class="text-lg font-semibold text-gray-800 mt-4 mb-2">Fisioterapeutas titulares:</h3>
+                <div class="ml-5 space-y-3">
+                    <div>
+                        <p class="font-semibold text-gray-800">Alba</p>
+                        <ul class="list-disc pl-5 mt-1 text-gray-600">
+                            <li>Título académico: Graduada en Fisioterapia</li>
+                            <li>Colegio Profesional: Ilustre Colegio Profesional de Fisioterapeutas de Castilla-La Mancha (COFICAM)</li>
+                            <li>Número de Colegiado: 3138</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <p class="font-semibold text-gray-800">Antonio</p>
+                        <ul class="list-disc pl-5 mt-1 text-gray-600">
+                            <li>Título académico: Graduado en Fisioterapia</li>
+                            <li>Colegio Profesional: Ilustre Colegio Profesional de Fisioterapeutas de Castilla-La Mancha (COFICAM)</li>
+                            <li>Número de Colegiado: 3166</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <p class="mt-3 text-gray-600"><strong>Normas profesionales aplicables:</strong> Código deontológico del Colegio de Fisioterapeutas de Castilla-La Mancha.</p>
             </section>
 
             <section>

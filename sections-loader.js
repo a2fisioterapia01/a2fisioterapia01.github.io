@@ -11,9 +11,11 @@
  * Cada sección tiene un id y la ruta al archivo HTML
  */
 const SECTIONS = [
+    { id: 'header-placeholder', file: 'sections/header.html' },
     { id: 'hero-placeholder', file: 'sections/hero.html' },
-    { id: 'about-placeholder', file: 'sections/about.html' },
     { id: 'services-placeholder', file: 'sections/services.html' },
+    { id: 'about-placeholder', file: 'sections/about.html' },
+    { id: 'convenios-placeholder', file: 'sections/convenios.html' },
     { id: 'testimonials-placeholder', file: 'sections/testimonials.html' },
     { id: 'instagram-placeholder', file: 'sections/instagram.html' },
     { id: 'contact-placeholder', file: 'sections/contact.html' },

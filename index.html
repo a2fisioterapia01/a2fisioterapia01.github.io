@@ -3,33 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A2 Fisioterapia - Avanza y Actívate con nuestro equipo de expertos en Bolaños de Calatrava, Ciudad Real. Recupera tu movimiento y di adiós al dolor.">
-    <meta name="keywords" content="fisioterapia, rehabilitación, fisioterapeuta, bolaños de calatrava, ciudad real, tratamiento, dolor, lesiones">
-    <title>A2 Fisioterapia</title>
+    <meta name="description" content="A2 Fisioterapia en Bolaños de Calatrava. Tratamientos especializados: fisioterapia deportiva, traumatológica, ATM, suelo pélvico y Pilates terapéutico. ¡Recupera tu movimiento!">
+    <meta name="keywords" content="fisioterapia bolaños calatrava, fisioterapeuta ciudad real, pilates terapéutico, fisioterapia deportiva, ATM, suelo pélvico, rehabilitación">
+    <meta name="author" content="A2 Fisioterapia">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://a2fisioterapia.com/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://a2fisioterapia.com/">
+    <meta property="og:title" content="A2 Fisioterapia | Avanza y Actívate - Bolaños de Calatrava">
+    <meta property="og:description" content="Centro de fisioterapia especializado en tratamientos deportivos, traumatológicos, ATM y suelo pélvico. Recupera tu bienestar con profesionales colegiados.">
+    <meta property="og:image" content="https://a2fisioterapia.com/assets/og-image.png">
+    <meta property="og:locale" content="es_ES">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://a2fisioterapia.com/">
+    <meta name="twitter:title" content="A2 Fisioterapia | Avanza y Actívate">
+    <meta name="twitter:description" content="Centro de fisioterapia en Bolaños de Calatrava. Especialistas en tratamientos personalizados.">
+    <meta name="twitter:image" content="https://a2fisioterapia.com/assets/og-image.png">
+    <meta name="theme-color" content="#6a3a88">
+    
+    <title>A2 Fisioterapia | Avanza y Actívate - Bolaños de Calatrava</title>
     <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Preconnect para CDNs -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://unpkg.com">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind-config.js"></script>
     
     <!-- Font Awesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    <!-- Configuración de Tailwind - Paleta de colores personalizada -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary-teal': '#6a3a88',
-                        'primary-teal-dark': '#4a2563',
-                        'accent-orange': '#6a3a88',
-                        'bg-light': '#F8FBFB',
-                        'text-dark': '#686868',
-                    },
-                }
-            }
-        }
-    </script>
     
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="config.css">
@@ -40,84 +51,59 @@
 
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "@id": "https://a2fisioterapia.com",
+      "name": "A2 Fisioterapia",
+      "description": "Centro de fisioterapia especializado en tratamientos deportivos, traumatológicos y Pilates terapéutico",
+      "url": "https://a2fisioterapia.com",
+      "telephone": "+34643567201",
+      "email": "a2fisioterapia01@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "C. Sancho Panza, 9",
+        "addressLocality": "Bolaños de Calatrava",
+        "addressRegion": "Ciudad Real",
+        "postalCode": "13260",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "38.9833",
+        "longitude": "-3.8500"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+          "opens": "09:00",
+          "closes": "21:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Friday",
+          "opens": "09:00",
+          "closes": "14:00"
+        }
+      ],
+      "priceRange": "€€",
+      "image": "https://a2fisioterapia.com/assets/og-image.png",
+      "sameAs": [
+        "https://www.instagram.com/a2fisioterapia",
+        "https://www.facebook.com/a2fisioterapia"
+      ],
+      "medicalSpecialty": "Physiotherapy"
+    }
+    </script>
 </head>
 <body class="bg-bg-light text-text-dark antialiased">
 
-    <!-- ============================================
-         HEADER - BARRA DE NAVEGACIÓN
-         ============================================ -->
-    <header class="bg-white shadow-lg sticky top-0 z-50">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
-            <!-- Logo y marca -->
-            <div class="flex items-center space-x-2">
-                <img src="assets/logo.png" alt="A2 Fisioterapia" class="h-16 w-auto">
-            </div>
-    
-            <!-- Navegación Desktop -->
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="#hero" class="text-text-dark hover:text-primary-teal transition duration-300 font-medium">Inicio</a>
-                <a href="#servicios" class="text-text-dark hover:text-primary-teal transition duration-300 font-medium">Servicios</a>
-                <a href="#equipo" class="text-text-dark hover:text-primary-teal transition duration-300 font-medium">Conócenos</a>
-                <a href="#contacto" class="text-text-dark hover:text-primary-teal transition duration-300 font-medium">Contacto</a>
-            </div>
-
-            <!-- Acciones Desktop (Redes + CTA) -->
-            <div class="hidden md:flex items-center space-x-6">
-                <!-- Redes Sociales Desktop -->
-                <div class="flex items-center space-x-5">
-                    <a href="#" class="text-gray-600 hover:text-[#6a3a88] hover:scale-110 transition duration-300" aria-label="Facebook" target="_blank">
-                        <i class="fab fa-facebook-f text-xl"></i>
-                    </a>
-                    <a href="https://www.instagram.com/a2fisioterapia_/" class="text-gray-600 hover:text-[#6a3a88] hover:scale-110 transition duration-300" aria-label="Instagram" target="_blank">
-                        <i class="fab fa-instagram text-xl"></i>
-                    </a>
-                    <a href="#" data-whatsapp-link class="text-gray-600 hover:text-[#6a3a88] hover:scale-110 transition duration-300" aria-label="WhatsApp" target="_blank">
-                        <i class="fab fa-whatsapp text-xl"></i>
-                    </a>
-                </div>
-        
-                <!-- Botón CTA Desktop -->
-                <a href="#contacto" class="bg-primary-teal text-white py-2 px-4 rounded-full shadow-lg hover:bg-primary-teal-dark transition duration-300 font-semibold">
-                    Pedir Cita
-                </a>
-            </div>
-    
-            <!-- Botón menú móvil -->
-            <button id="menu-button" class="md:hidden p-2 text-text-dark focus:outline-none">
-                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-            </button>
-        </nav>
-    
-        <!-- Menú Móvil -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-inner pb-4">
-            <a href="#hero" class="block px-4 py-2 text-text-dark hover:bg-bg-light">Inicio</a>
-            <a href="#servicios" class="block px-4 py-2 text-text-dark hover:bg-bg-light">Servicios</a>
-            <a href="#equipo" class="block px-4 py-2 text-text-dark hover:bg-bg-light">Equipo</a>
-            <a href="#contacto" class="block px-4 py-2 text-text-dark hover:bg-bg-light">Contacto</a>
-            
-            <div class="border-t border-gray-200 mt-2 pt-4 px-4 flex items-center justify-between">
-                <!-- Redes Sociales Móvil -->
-                <div class="flex items-center space-x-6">
-                    <a href="#" class="text-gray-600 hover:text-[#6a3a88] hover:scale-110 transition duration-300" aria-label="Facebook" target="_blank">
-                        <i class="fab fa-facebook-f text-xl"></i>
-                    </a>
-                    <a href="https://www.instagram.com/a2fisioterapia_/" class="text-gray-600 hover:text-[#6a3a88] hover:scale-110 transition duration-300" aria-label="Instagram" target="_blank">
-                        <i class="fab fa-instagram text-xl"></i>
-                    </a>
-                    <a href="#" data-whatsapp-link class="text-gray-600 hover:text-[#6a3a88] hover:scale-110 transition duration-300" aria-label="WhatsApp" target="_blank">
-                        <i class="fab fa-whatsapp text-xl"></i>
-                    </a>
-                </div>
-
-                <!-- Botón CTA Móvil -->
-                <a href="#contacto" class="bg-primary-teal text-white px-4 py-2 rounded-lg font-semibold hover:bg-primary-teal-dark transition duration-300 text-sm">
-                    Pedir Cita
-                </a>
-            </div>
-        </div>
-    </header>
+    <!-- Contenedor para el header -->
+    <div id="header-placeholder"></div>
     
     <!-- Contenedor para el hero -->
     <div id="hero-placeholder"></div>
@@ -127,6 +113,9 @@
 
     <!-- Contenedor para la sección "Equipo" -->
     <div id="about-placeholder"></div>
+
+    <!-- Contenedor para la sección "Convenios" -->
+    <div id="convenios-placeholder"></div>
 
     <!-- Contenedor para la sección "Testimonios" -->
     <div id="testimonials-placeholder"></div>
@@ -146,40 +135,23 @@
     <!-- Botón Flotante WhatsApp -->
     <a href="#" 
        data-whatsapp-link
-       class="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full shadow-2xl hover:bg-[#20BA5A] transition duration-300 z-50 flex items-center justify-center hover:scale-110"
+       class="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full shadow-2xl hover:bg-[#20BA5A] transition duration-300 flex items-center justify-center hover:scale-110"
+       style="z-index: 9999;"
        target="_blank" 
        aria-label="Contactar por WhatsApp">
         <i class="fab fa-whatsapp text-3xl"></i>
     </a>
     
     <!-- Scripts -->
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="sections-loader.js"></script>
-    <script src="instagram-feed.js"></script>
-    <script src="script.js"></script>
-
-    <!-- Google Reviews Script -->
-    <script src="google-reviews.js"></script>
+    <script src="sections-loader.js" defer></script>
+    <script src="instagram-feed.js" defer></script>
+    <script src="google-reviews.js" defer></script>
+    <script src="script.js" defer></script>
     
-    <!-- 
-      CONFIGURACIÓN GOOGLE REVIEWS: 
-      1. Obtén tu API KEY en Google Cloud Platform (habilitar Places API y Maps JS API).
-      2. Descomenta la siguiente línea y reemplaza TU_API_KEY.
-    -->
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&libraries=places&callback=initGoogleReviews" async defer></script> -->
-
-    <!-- Si no usas el callback de la URL, iniciamos manual al cargar secciones -->
-    <script>
-        document.addEventListener('sectionsLoaded', function() {
-            // Solo intentar iniciar si la librería de google maps se cargó (si descomentas la línea de arriba)
-            if (typeof initGoogleReviews === 'function') {
-                initGoogleReviews();
-            }
-        });
-    </script>
-
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    
     <!-- AOS Animation Library JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
 </body>
 </html>
