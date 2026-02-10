@@ -5,15 +5,7 @@
 /* Importar fuente de Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-/* ============================================
-   VARIABLES GLOBALES Y CONFIGURACIÓN BASE
-   ============================================ */
-:root {
-    --primary-teal: #6a3a88;
-    --accent-orange: #FF7F50;
-    --bg-light: #F8FBFB;
-    --text-dark: #686868;
-}
+/* Las variables CSS están centralizadas en config.css */
 
 html {
     overflow-x: hidden;
@@ -197,7 +189,9 @@ footer a, footer button {
     -webkit-tap-highlight-color: transparent !important;
 }
 
+/* Estilo de enfoque accesible para footer */
 footer a:focus, footer button:focus {
-    outline: none !important;
-    box-shadow: none !important;
+    outline: 2px solid var(--primary-teal) !important;
+    outline-offset: 2px !important;
+    border-radius: 4px;
 }

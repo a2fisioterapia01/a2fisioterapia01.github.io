@@ -121,24 +121,11 @@ if (document.readyState === 'loading') {
 
 /**
  * Listener para cuando las secciones estén cargadas
- * Aquí se inicializan los scripts que dependen del contenido de las secciones
+ * Las funcionalidades se inicializan automáticamente desde script.js
  */
 document.addEventListener('sectionsLoaded', () => {
     console.log('✓ Evento sectionsLoaded disparado');
-    
-    // Inicializar funcionalidades que dependen de las secciones cargadas
-    if (typeof initializeMobileMenu === 'function') {
-        initializeMobileMenu();
-    }
-    if (typeof initializeContactForm === 'function') {
-        initializeContactForm();
-    }
-    if (typeof initializeModal === 'function') {
-        initializeModal();
-    }
-    if (typeof initializeSmoothScroll === 'function') {
-        initializeSmoothScroll();
-    }
+    // Las inicializaciones se manejan en script.js para evitar duplicación
 });
 
 // Exportar funciones para uso en otros scripts si es necesario
