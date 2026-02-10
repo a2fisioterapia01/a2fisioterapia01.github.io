@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
  */
 function initializeAll() {
     console.log('🚀 Inicializando funcionalidades...');
-    initializeMobileMenu();
     initializeContactForm();
     initializeModal();
     initializeSmoothScroll();
@@ -39,6 +38,9 @@ function updateWhatsAppLinks() {
 // Escuchar evento de carga de secciones para actualizar enlaces en el footer y otras secciones
 document.addEventListener('sectionsLoaded', function() {
     updateWhatsAppLinks();
+    
+    // Inicializar menú móvil después de que el header se haya cargado
+    initializeMobileMenu();
     
     // Inicializar Swipers
     initSwipers();
