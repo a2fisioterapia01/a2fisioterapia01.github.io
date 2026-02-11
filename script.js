@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
  */
 function initializeAll() {
     console.log('🚀 Inicializando funcionalidades...');
-    initializeContactForm();
     initializeModal();
     initializeSmoothScroll();
     updateWhatsAppLinks();
@@ -41,6 +40,9 @@ document.addEventListener('sectionsLoaded', function() {
     
     // Inicializar menú móvil después de que el header se haya cargado
     initializeMobileMenu();
+    
+    // Inicializar formulario de contacto después de que se haya cargado
+    initializeContactForm();
     
     // Inicializar Swipers
     initSwipers();
