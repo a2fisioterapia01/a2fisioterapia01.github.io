@@ -33,9 +33,11 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- Preload recursos críticos para mejorar LCP -->
-    <link rel="preload" href="assets/home.png" as="image">
+    <link rel="preload" href="assets/home.png" as="image" fetchpriority="high">
     <link rel="preload" href="assets/logo.png" as="image">
     <link rel="preload" href="config.css" as="style">
     <link rel="preload" href="styles.css" as="style">
@@ -44,18 +46,19 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="tailwind-config.js"></script>
     
-    <!-- Font Awesome para iconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome para iconos (carga async) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></noscript>
     
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="config.css">
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Swiper CSS (carga async - no crítico) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'" />
 
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- AOS Animation Library (carga async - no crítico) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'" />
     
     <!-- Schema.org structured data -->
     <script type="application/ld+json">
@@ -101,7 +104,7 @@
         "https://www.instagram.com/a2fisioterapia_",
         "https://www.facebook.com/a2fisioterapia"
       ],
-      "medicalSpecialty": "Physiotherapy"
+      "medicalSpecialty": "PhysicalMedicine"
     }
     </script>
     
@@ -144,6 +147,7 @@
     <!-- Contenedor para el header -->
     <div id="header-placeholder"></div>
     
+    <main>
     <!-- Contenedor para el hero -->
     <div id="hero-placeholder"></div>
     
@@ -158,6 +162,7 @@
     
     <!-- Contenedor para la sección "Contacto" -->
     <div id="contact-placeholder"></div>
+    </main>
     
     <!-- Contenedor para el footer -->
     <div id="footer-placeholder"></div>

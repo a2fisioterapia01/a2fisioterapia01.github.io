@@ -2,7 +2,7 @@
    FISIO Clinic - Estilos Personalizados
    ============================================ */
 
-/* Importar fuente de Google Fonts */
+/* Importar fuente de Google Fonts con font-display: swap */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 /* Las variables CSS están centralizadas en config.css */
