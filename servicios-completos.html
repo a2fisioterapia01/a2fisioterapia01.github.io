@@ -13,9 +13,17 @@
     <meta property="og:title" content="Servicios y Tratamientos - A2 Fisioterapia">
     <meta property="og:description" content="Tratamientos especializados de fisioterapia: deportiva, traumatológica, ATM, suelo pélvico y Pilates. Consulta horarios y bonos disponibles.">
     <meta property="og:image" content="https://a2fisioterapia.com/assets/logo.png">
+    <meta property="og:locale" content="es_ES">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://a2fisioterapia.com/servicios-completos.html">
+    <meta name="twitter:title" content="Servicios y Tratamientos - A2 Fisioterapia">
+    <meta name="twitter:description" content="Tratamientos especializados de fisioterapia: deportiva, traumatológica, ATM, suelo pélvico y Pilates.">
+    <meta name="twitter:image" content="https://a2fisioterapia.com/assets/logo.png">
     <meta name="theme-color" content="#6a3a88">
     
-    <title>A2 Fisioterapia | Avanza y Actívate</title>
+    <title>Servicios y Tratamientos | A2 Fisioterapia Bolaños de Calatrava</title>
     <link rel="icon" type="image/png" href="assets/favicon.png">
     
     <link rel="preconnect" href="https://cdn.tailwindcss.com">
@@ -39,6 +47,86 @@
 
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Schema.org structured data para Servicios -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "A2 Fisioterapia - Servicios",
+      "description": "Servicios especializados de fisioterapia en Bolaños de Calatrava",
+      "url": "https://a2fisioterapia.com/servicios-completos.html",
+      "telephone": "+34643567201",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "C. Sancho Panza, 9",
+        "addressLocality": "Bolaños de Calatrava",
+        "addressRegion": "Ciudad Real",
+        "postalCode": "13260",
+        "addressCountry": "ES"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios de Fisioterapia",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Tratamientos Personalizados",
+              "description": "Planes de tratamiento adaptados a necesidades específicas"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Pilates Máquinas y Suelo",
+              "description": "Mejora postural, fuerza y flexibilidad con equipamiento especializado"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Fisioterapia Deportiva",
+              "description": "Readaptación funcional para deportistas"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Rehabilitación Postquirúrgica",
+              "description": "Recuperación de movilidad tras cirugía"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <!-- Schema.org BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://a2fisioterapia.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Servicios",
+          "item": "https://a2fisioterapia.com/servicios-completos.html"
+        }
+      ]
+    }
+    </script>
 </head>
 <body class="bg-bg-light text-text-dark antialiased">
 
@@ -411,6 +499,11 @@
                 </div>
                 <!-- Club/Asociación 2 -->
                 <div class="flex flex-col items-center justify-center p-6 bg-gray-50 rounded-lg hover:shadow-md transition">
+                    <img src="assets/convenios/atletismo.png" alt="Club Atletismo Bolaños" class="max-h-16 object-contain mb-2" width="64" height="64" loading="lazy">
+                    <span class="text-sm font-medium text-gray-700">Club Atletismo Bolaños</span>
+                </div>
+                <!-- Club/Asociación 3 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-gray-50 rounded-lg hover:shadow-md transition">
                     <img src="assets/convenios/Oramfys.png" alt="Asociación Oramfys" class="max-h-16 object-contain mb-2" width="64" height="64" loading="lazy">
                     <span class="text-sm font-medium text-gray-700">Asociación de Discapacitados Oramfys</span>
                 </div>
@@ -484,33 +577,5 @@
     
     <!-- AOS Animation Library JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
-    
-    <script>
-        // Esperar a que todos los scripts defer se carguen
-        window.addEventListener('load', function() {
-            // Inicializar Swiper para galería
-            const swiper = new Swiper('.servicesGallery', {
-                loop: true,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                autoplay: {
-                    delay: 5000,
-                    disableOnInteraction: false,
-                }
-            });
-
-            // Inicializar AOS
-            AOS.init({
-                duration: 800,
-                once: false
-            });
-        });
-    </script>
 </body>
 </html>

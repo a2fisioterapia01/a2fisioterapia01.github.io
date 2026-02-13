@@ -16,8 +16,6 @@ const SECTIONS = [
     { id: 'services-placeholder', file: 'sections/services.html' },
     { id: 'about-placeholder', file: 'sections/about.html' },
     { id: 'convenios-placeholder', file: 'sections/convenios.html' },
-    { id: 'testimonials-placeholder', file: 'sections/testimonials.html' },
-    { id: 'instagram-placeholder', file: 'sections/instagram.html' },
     { id: 'contact-placeholder', file: 'sections/contact.html' },
     { id: 'footer-placeholder', file: 'sections/footer.html' },
     { id: 'modal-placeholder', file: 'sections/modal.html' }
@@ -56,10 +54,6 @@ async function loadSection(elementId, filePath) {
             
             // Forzar reflow para asegurar que el navegador procese el HTML
             element.offsetHeight;
-            
-            console.log(`✓ Sección cargada: ${filePath}`);
-        } else {
-            console.warn(`⚠ Elemento no encontrado: ${elementId}`);
         }
         
     } catch (error) {
@@ -82,10 +76,6 @@ async function loadSection(elementId, filePath) {
  * @returns {Promise} - Promise que se resuelve cuando todas las secciones están cargadas
  */
 async function loadAllSections() {
-    console.log('🚀 Iniciando carga de secciones...');
-    
-    const startTime = performance.now();
-    
     // Cargar todas las secciones en paralelo para mejor rendimiento
     const promises = SECTIONS.map(section => 
         loadSection(section.id, section.file)
@@ -93,18 +83,11 @@ async function loadAllSections() {
     
     await Promise.all(promises);
     
-    const endTime = performance.now();
-    const loadTime = (endTime - startTime).toFixed(2);
-    
-    console.log(`✓ Todas las secciones cargadas en ${loadTime}ms`);
-    
     // Usar requestAnimationFrame para asegurar que el DOM esté completamente actualizado
     requestAnimationFrame(() => {
         requestAnimationFrame(() => {
             // Disparar evento personalizado cuando todas las secciones estén cargadas
-            const event = new Event('sectionsLoaded');
-            document.dispatchEvent(event);
-            console.log('✓ Evento sectionsLoaded disparado');
+            document.dispatchEvent(new Event('sectionsLoaded'));
         });
     });
 }
@@ -118,15 +101,6 @@ if (document.readyState === 'loading') {
     // DOMContentLoaded ya se disparó
     loadAllSections();
 }
-
-/**
- * Listener para cuando las secciones estén cargadas
- * Las funcionalidades se inicializan automáticamente desde script.js
- */
-document.addEventListener('sectionsLoaded', () => {
-    console.log('✓ Evento sectionsLoaded disparado');
-    // Las inicializaciones se manejan en script.js para evitar duplicación
-});
 
 // Exportar funciones para uso en otros scripts si es necesario
 if (typeof module !== 'undefined' && module.exports) {

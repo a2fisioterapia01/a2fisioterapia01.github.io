@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
  * Inicializa todas las funcionalidades
  */
 function initializeAll() {
-    console.log('🚀 Inicializando funcionalidades...');
     initializeModal();
     initializeSmoothScroll();
     updateWhatsAppLinks();
@@ -60,34 +59,22 @@ document.addEventListener('sectionsLoaded', function() {
 
 function initSwipers() {
     if (typeof Swiper === 'undefined') {
-        console.warn('Swiper no está cargado');
         return;
     }
 
-    // Inicializar carrusel de testimonios
-    if (document.querySelector('.testimonials-swiper')) {
-        new Swiper('.testimonials-swiper', {
+    // Inicializar carruseles si existen (por ejemplo en servicios-completos.html)
+    if (document.querySelector('.services-swiper')) {
+        new Swiper('.services-swiper', {
             slidesPerView: 1,
             spaceBetween: 20,
-            loop: true, // Loop infinito
+            loop: true,
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
             },
             breakpoints: {
-                640: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                },
-            },
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
+                640: { slidesPerView: 2, spaceBetween: 20 },
+                1024: { slidesPerView: 3, spaceBetween: 30 },
             },
         });
     }
@@ -108,11 +95,9 @@ function initializeMobileMenu() {
     const mobileMenu = document.getElementById('mobile-menu');
 
     if (!menuButton || !mobileMenu) {
-        console.warn('⚠ Elementos del menú móvil no encontrados');
         return;
     }
 
-    console.log('✓ Menú móvil encontrado, inicializando...');
     setupMobileMenu(menuButton, mobileMenu);
 }
 
@@ -139,8 +124,6 @@ function setupMobileMenu(menuButton, mobileMenu) {
             closeMobileMenu(mobileMenu);
         });
     });
-    
-    console.log('✓ Menú móvil configurado correctamente');
 }
 
 /**
@@ -180,7 +163,6 @@ function initializeContactForm() {
     const form = document.querySelector('#contacto form');
 
     if (!form) {
-        console.warn('Formulario de contacto no encontrado');
         return;
     }
 
@@ -270,7 +252,6 @@ function initializeModal() {
     const modal = document.getElementById('confirmation-modal');
 
     if (!modal) {
-        console.warn('Modal de confirmación no encontrado');
         return;
     }
 

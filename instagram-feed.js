@@ -1,12 +1,16 @@
-// Script para cargar el feed de Instagram
+/**
+ * instagram-feed.js (OPTIMIZADO)
+ * Carga feed de Instagram solo si está configurado
+ */
+
 document.addEventListener('sectionsLoaded', function() {
     const feedContainer = document.getElementById('instagram-feed');
     if (!feedContainer) return;
 
-    // Configuración
-    // Reemplaza esto con tu token de acceso de larga duración
-    // Puedes generar uno en developers.facebook.com
-    const ACCESS_TOKEN = ''; // Dejar vacío para usar datos de ejemplo
+    const ACCESS_TOKEN = ''; // Configurar con token real si se necesita
+    
+    // No ejecutar si no hay sección de Instagram
+    if (!ACCESS_TOKEN) return;
     
     // Función para renderizar posts
     function renderPosts(posts) {

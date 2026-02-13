@@ -1,22 +1,16 @@
 /**
- * google-reviews.js
- * Función para obtener y mostrar reseñas de Google Places API
- * 
- * INSTRUCCIONES:
- * 1. Obtén una API Key de Google Cloud Platform con "Places  API" y "Maps JavaScript API" habilitadas.
- * 2. Obtén el Place ID de tu negocio.
- * 3. Descomenta la etiqueta script en index.html y coloca tu API Key.
- * 4. Configura la variable GOOGLE_PLACE_ID abajo.
+ * google-reviews.js (OPTIMIZADO)
+ * Carga reseñas de Google Places API solo si está configurado
  */
 
-const GOOGLE_PLACE_ID = 'TU_PLACE_ID_AQUI'; // Reemplaza con tu Place ID real
+const GOOGLE_PLACE_ID = 'TU_PLACE_ID_AQUI';
 
 function initGoogleReviews() {
-    // Verificar si la API de Google Maps está cargada
-    if (!window.google || !window.google.maps || !window.google.maps.places) {
-        console.warn('Google Maps API no está cargada. Mostrando reseñas de ejemplo.');
-        return;
-    }
+    // No ejecutar si no está configurado
+    if (GOOGLE_PLACE_ID === 'TU_PLACE_ID_AQUI') return;
+    
+    // Verificar API de Google Maps
+    if (!window.google?.maps?.places) return;
 
     const container = document.getElementById('google-reviews-container');
     if (!container) return;

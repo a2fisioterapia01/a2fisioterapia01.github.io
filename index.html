@@ -34,6 +34,12 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://unpkg.com">
     
+    <!-- Preload recursos críticos para mejorar LCP -->
+    <link rel="preload" href="assets/home.png" as="image">
+    <link rel="preload" href="assets/logo.png" as="image">
+    <link rel="preload" href="config.css" as="style">
+    <link rel="preload" href="styles.css" as="style">
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="tailwind-config.js"></script>
@@ -92,10 +98,44 @@
       "priceRange": "€€",
       "image": "https://a2fisioterapia.com/assets/og-image.png",
       "sameAs": [
-        "https://www.instagram.com/a2fisioterapia",
+        "https://www.instagram.com/a2fisioterapia_",
         "https://www.facebook.com/a2fisioterapia"
       ],
       "medicalSpecialty": "Physiotherapy"
+    }
+    </script>
+    
+    <!-- FAQ Schema para preguntas frecuentes -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué servicios de fisioterapia ofrecen en A2 Fisioterapia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ofrecemos tratamientos personalizados, Pilates (máquinas y suelo), fisioterapia deportiva, rehabilitación postquirúrgica, ATM, suelo pélvico y fisioterapia a domicilio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es el horario de A2 Fisioterapia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Atendemos de lunes a jueves de 9:00 a 21:00 y viernes de 9:00 a 14:00."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Dónde está ubicada la clínica A2 Fisioterapia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Estamos en C. Sancho Panza, 9, 13260 Bolaños de Calatrava, Ciudad Real."
+          }
+        }
+      ]
     }
     </script>
 </head>
@@ -115,12 +155,6 @@
 
     <!-- Contenedor para la sección "Convenios" -->
     <div id="convenios-placeholder"></div>
-
-    <!-- Contenedor para la sección "Testimonios" -->
-    <!-- <div id="testimonials-placeholder"></div> -->
-
-    <!-- Contenedor para la sección "Instagram" -->
-    <!-- <div id="instagram-placeholder"></div> -->
     
     <!-- Contenedor para la sección "Contacto" -->
     <div id="contact-placeholder"></div>
@@ -136,15 +170,14 @@
        data-whatsapp-link
        class="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full shadow-2xl hover:bg-[#20BA5A] transition duration-300 flex items-center justify-center hover:scale-110"
        style="z-index: 9999;"
-       target="_blank" 
+       target="_blank"
+       rel="noopener noreferrer"
        aria-label="Contactar por WhatsApp">
         <i class="fab fa-whatsapp text-3xl"></i>
     </a>
     
     <!-- Scripts -->
     <script src="sections-loader.js" defer></script>
-    <script src="instagram-feed.js" defer></script>
-    <script src="google-reviews.js" defer></script>
     <script src="script.js" defer></script>
     
     <!-- Swiper JS -->

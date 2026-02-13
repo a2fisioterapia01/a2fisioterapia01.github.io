@@ -155,11 +155,6 @@ textarea:focus {
     outline-offset: 2px;
 }
 
-html {
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
-
 /* ============================================
    UTILIDADES PERSONALIZADAS
    ============================================ */
