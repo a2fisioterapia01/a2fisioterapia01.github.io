@@ -486,27 +486,54 @@
     <!-- ============================================
          CONVENIOS / ASOCIACIONES
          ============================================ -->
-    <section id="convenios" class="py-16 bg-white">
+    <section id="convenios" class="py-16 sm:py-20 bg-gradient-to-br from-purple-50 via-white to-purple-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-6 text-text-dark">Convenios con Asociaciones y Clubs</h2>
-            <p class="text-center text-gray-600 max-w-3xl mx-auto mb-8">Ofrecemos acuerdos de colaboración para clubs, asociaciones y entidades deportivas con condiciones y facilidades para sus jugadores y miembros. Contáctanos para más información.</p>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-text-dark mb-4">Colaboramos con Clubs y Asociaciones</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Ofrecemos acuerdos especiales para clubs deportivos y asociaciones locales, apoyando la salud y bienestar de nuestra comunidad.
+                </p>
+            </div>
 
-            <div class="flex justify-center gap-8 mb-8">
-                <!-- Club/Asociación 1 -->
-                <div class="flex flex-col items-center justify-center p-6 bg-gray-50 rounded-lg hover:shadow-md transition">
-                    <img src="assets/convenios/balonmano.png" alt="Club Balonmano Bolaños" class="max-h-16 object-contain mb-2" width="64" height="64" loading="lazy">
-                    <span class="text-sm font-medium text-gray-700">Club Balonmano Bolaños</span>
+            <div class="flex flex-wrap justify-center items-center gap-8 sm:gap-12 mb-8">
+                <!-- Club Balonmano -->
+                <div class="flex flex-col items-center justify-center group">
+                    <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-primary-teal w-64">
+                        <div class="flex justify-center mb-3">
+                            <img src="assets/convenios/balonmano.png" alt="Club Balonmano Bolaños" class="h-20 w-auto object-contain transition-all duration-300" width="80" height="80" loading="lazy">
+                        </div>
+                        <p class="text-sm font-semibold text-gray-700 text-center">Club Balonmano Bolaños</p>
+                    </div>
                 </div>
-                <!-- Club/Asociación 2 -->
-                <div class="flex flex-col items-center justify-center p-6 bg-gray-50 rounded-lg hover:shadow-md transition">
-                    <img src="assets/convenios/atletismo.png" alt="Club Atletismo Bolaños" class="max-h-16 object-contain mb-2" width="64" height="64" loading="lazy">
-                    <span class="text-sm font-medium text-gray-700">Club Atletismo Bolaños</span>
+
+                <!-- Club Atletismo -->
+                <div class="flex flex-col items-center justify-center group">
+                    <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-primary-teal w-64">
+                        <div class="flex justify-center mb-3">
+                            <img src="assets/convenios/atletismo.png" alt="Club Atletismo Bolaños" class="h-20 w-auto object-contain transition-all duration-300" width="80" height="80" loading="lazy">
+                        </div>
+                        <p class="text-sm font-semibold text-gray-700 text-center">Club Atletismo Bolaños</p>
+                    </div>
                 </div>
-                <!-- Club/Asociación 3 -->
-                <div class="flex flex-col items-center justify-center p-6 bg-gray-50 rounded-lg hover:shadow-md transition">
-                    <img src="assets/convenios/Oramfys.png" alt="Asociación Oramfys" class="max-h-16 object-contain mb-2" width="64" height="64" loading="lazy">
-                    <span class="text-sm font-medium text-gray-700">Asociación de Discapacitados Oramfys</span>
+
+                <!-- Asociación Oramfys -->
+                <div class="flex flex-col items-center justify-center group">
+                    <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-primary-teal w-64">
+                        <div class="flex justify-center mb-3">
+                            <img src="assets/convenios/Oramfys.png" alt="Asociación de Discapacitados Oramfys" class="h-20 w-auto object-contain transition-all duration-300" width="80" height="80" loading="lazy">
+                        </div>
+                        <p class="text-sm font-semibold text-gray-700 text-center">Asociación de<br>Discapacitados Oramfys</p>
+                    </div>
                 </div>
+            </div>
+
+            <!-- CTA para más convenios -->
+            <div class="text-center mt-8">
+                <p class="text-gray-600 mb-4">¿Tu club o asociación está interesado en un convenio?</p>
+                <a href="#contacto" class="inline-flex items-center gap-2 bg-primary-teal text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-primary-teal-dark transition duration-300 hover:scale-105">
+                    <i class="fas fa-handshake"></i>
+                    Solicitar Información
+                </a>
             </div>
         </div>
     </section>
