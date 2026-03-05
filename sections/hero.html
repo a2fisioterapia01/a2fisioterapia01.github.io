@@ -2,8 +2,11 @@
      SECCIÓN HERO / PORTADA PRINCIPAL
      ============================================ -->
 <section id="hero" class="relative h-[600px] sm:h-[700px] flex items-center">
-    <!-- Imagen de Fondo -->
-    <div class="absolute inset-0 bg-cover bg-no-repeat bg-[75%_center] sm:bg-[center_top]" style="background-image: url('assets/home.png');"></div>
+    <!-- Imagen de Fondo optimizada para LCP con WebP -->
+    <picture>
+        <source srcset="assets/home.webp" type="image/webp">
+        <img src="assets/home.png" alt="" class="absolute inset-0 w-full h-full object-cover object-[75%_center] sm:object-[center_top]" width="1920" height="700" fetchpriority="high">
+    </picture>
     
     <!-- Overlay uniforme para mejorar legibilidad -->
     <div class="absolute inset-0 bg-white/50"></div>

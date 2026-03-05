@@ -28,7 +28,7 @@
     <title>A2 Fisioterapia | Avanza y Actívate</title>
     <link rel="icon" type="image/png" href="assets/favicon.png">
     
-    <!-- Preconnect para CDNs -->
+    <!-- Preconnect para CDNs y recursos externos -->
     <link rel="preconnect" href="https://cdn.tailwindcss.com">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
@@ -36,29 +36,63 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
+    <!-- DNS Prefetch para mejorar conexiones -->
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    
     <!-- Preload recursos críticos para mejorar LCP -->
-    <link rel="preload" href="assets/home.png" as="image" fetchpriority="high">
-    <link rel="preload" href="assets/logo.png" as="image">
-    <link rel="preload" href="config.css" as="style">
-    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="assets/home.png" as="image" fetchpriority="high" type="image/png">
+    <link rel="preload" href="assets/logo.png" as="image" fetchpriority="high" type="image/png">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style">
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="tailwind-config.js"></script>
+    <!-- CSS Crítico Inline para Above-the-Fold -->
+    <style>
+        /* Variables CSS Críticas */
+        :root{--primary-teal:#6a3a88;--primary-teal-light:#8e5ab3;--primary-teal-dark:#4a2563;--bg-light:#F8FBFB;--bg-white:#FFFFFF;--text-dark:#686868;--text-gray:#6B7280;}
+        /* Reset y Base Crítico */
+        *{margin:0;padding:0;box-sizing:border-box;}
+        html{overflow-x:hidden;scroll-behavior:smooth;}
+        body{font-family:'Inter',sans-serif;overflow-x:hidden;max-width:100vw;background-color:var(--bg-light);color:var(--text-dark);-webkit-font-smoothing:antialiased;}
+        /* Header Crítico */
+        header{background-color:#fff;box-shadow:0 4px 6px -1px rgba(0,0,0,.1);position:sticky;top:0;z-index:50;}
+        header nav{max-width:80rem;margin:0 auto;padding:0.75rem 1rem;display:flex;justify-content:space-between;align-items:center;}
+        header img{height:4rem;width:auto;}
+        /* Hero Crítico */
+        #hero{position:relative;height:600px;display:flex;align-items:center;}
+        #hero .absolute{position:absolute;}
+        #hero .inset-0{top:0;right:0;bottom:0;left:0;}
+        /* Botón CTA Crítico */
+        .bg-primary-teal{background-color:var(--primary-teal);}
+        .text-white{color:#fff;}
+        /* Utilidades Tailwind Críticas */
+        .hidden{display:none;}
+        @media(min-width:768px){.md\:flex{display:flex;}.md\:hidden{display:none;}}
+    </style>
     
-    <!-- Font Awesome para iconos (carga async) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'" />
+    <!-- Fuentes de Google con display swap -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    
+    <!-- Tailwind CSS con defer -->
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script src="tailwind-config.js" defer></script>
+    
+    <!-- Estilos personalizados con preload y carga async -->
+    <link rel="preload" href="config.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="config.css">
+        <link rel="stylesheet" href="styles.css">
+    </noscript>
+    
+    <!-- Font Awesome con carga diferida -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></noscript>
-    
-    <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="config.css">
-    <link rel="stylesheet" href="styles.css">
 
-    <!-- Swiper CSS (carga async - no crítico) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'" />
+    <!-- Swiper CSS (carga diferida) -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
-    <!-- AOS Animation Library (carga async - no crítico) -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'" />
+    <!-- AOS Animation Library (carga diferida) -->
+    <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     
     <!-- Schema.org structured data -->
     <script type="application/ld+json">
@@ -184,14 +218,12 @@
         <i class="fab fa-whatsapp text-3xl"></i>
     </a>
     
-    <!-- Scripts -->
+    <!-- Scripts optimizados con defer -->
     <script src="sections-loader.js" defer></script>
     <script src="script.js" defer></script>
     
-    <!-- Swiper JS -->
+    <!-- Third-party scripts con defer para no bloquear el rendering -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
-    
-    <!-- AOS Animation Library JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
 </body>
 </html>

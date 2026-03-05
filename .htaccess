@@ -1,19 +1,79 @@
-# Compresión GZIP
+# ============================================
+# A2 FISIOTERAPIA - Configuración Optimizada
+# ============================================
+
+# -------------------- COMPRESIÓN GZIP MEJORADA --------------------
 <IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+  # Comprimir HTML, CSS, JavaScript, JSON, XML y fuentes
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript application/json
+  AddOutputFilterByType DEFLATE application/xml application/rss+xml application/xhtml+xml
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+  AddOutputFilterByType DEFLATE application/x-font-ttf application/x-font-opentype
+  AddOutputFilterByType DEFLATE font/opentype font/ttf font/woff font/woff2
+  
+  # Eliminar bugs en browsers antiguos
+  BrowserMatch ^Mozilla/4 gzip-only-text/html
+  BrowserMatch ^Mozilla/4\.0[678] no-gzip
+  BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
 </IfModule>
 
-# Caché del navegador
+# -------------------- CACHÉ DEL NAVEGADOR OPTIMIZADO --------------------
 <IfModule mod_expires.c>
   ExpiresActive On
+  
+  # HTML - Cache corto para actualizaciones frecuentes
+  ExpiresByType text/html "access plus 1 hour"
+  
+  # Imágenes - Cache largo
   ExpiresByType image/jpg "access plus 1 year"
   ExpiresByType image/jpeg "access plus 1 year"
   ExpiresByType image/gif "access plus 1 year"
   ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
   ExpiresByType image/svg+xml "access plus 1 year"
-  ExpiresByType text/css "access plus 1 month"
-  ExpiresByType application/javascript "access plus 1 month"
-  ExpiresByType text/html "access plus 1 week"
+  ExpiresByType image/x-icon "access plus 1 year"
+  
+  # CSS y JavaScript - Cache largo con versionado
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType application/x-javascript "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  
+  # Fuentes - Cache largo
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/ttf "access plus 1 year"
+  ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+</IfModule>
+
+# Cache-Control Headers adicionales
+<IfModule mod_headers.c>
+  # Archivos estáticos - Inmutable cache
+  <FilesMatch "\.(css|js|jpg|jpeg|png|gif|webp|svg|ico|woff|woff2|ttf|eot)$">
+    Header set Cache-Control "max-age=31536000, public, immutable"
+  </FilesMatch>
+  
+  # HTML - Cache con revalidación
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "max-age=3600, public, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# -------------------- SEGURIDAD --------------------
+<IfModule mod_headers.c>
+  # Prevenir clickjacking
+  Header always set X-Frame-Options "SAMEORIGIN"
+  
+  # Prevenir MIME sniffing
+  Header always set X-Content-Type-Options "nosniff"
+  
+  # XSS Protection
+  Header always set X-XSS-Protection "1; mode=block"
+  
+  # Referrer Policy
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
 
 # Página de error 404 personalizada

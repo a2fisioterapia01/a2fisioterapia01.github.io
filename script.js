@@ -1,5 +1,5 @@
 /* ============================================
-   FISIO Clinic - JavaScript Principal
+   A2 FISIOTERAPIA - JavaScript Principal
    ============================================ */
 
 const WHATSAPP_NUMBER = '34643567201';
