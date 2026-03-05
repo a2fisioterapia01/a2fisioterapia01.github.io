@@ -62,6 +62,38 @@ function initSwipers() {
         return;
     }
 
+    // Inicializar carrusel de instalaciones
+    if (document.querySelector('.instalaciones-swiper')) {
+        new Swiper('.instalaciones-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                }
+            }
+        });
+    }
+
     // Inicializar carruseles si existen (por ejemplo en servicios-completos.html)
     if (document.querySelector('.services-swiper')) {
         new Swiper('.services-swiper', {

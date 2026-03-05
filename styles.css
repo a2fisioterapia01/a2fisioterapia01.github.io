@@ -190,3 +190,116 @@ footer a:focus, footer button:focus {
     outline-offset: 2px !important;
     border-radius: 4px;
 }
+
+/* ============================================
+   CARRUSEL DE INSTALACIONES (Optimizado para 5:4)
+   ============================================ */
+
+/* Contenedor del carrusel */
+.instalaciones-swiper {
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+/* Contenedor del slide */
+.instalaciones-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Imágenes 5:4 responsive */
+.instalaciones-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Tablet */
+@media (min-width: 640px) {
+    .instalaciones-img {
+        height: 500px;
+    }
+}
+
+/* Desktop - Mostrar más grande */
+@media (min-width: 1024px) {
+    .instalaciones-img {
+        height: 700px;
+    }
+    
+    .instalaciones-swiper {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
+
+/* Botones de navegación personalizados */
+.instalaciones-swiper .swiper-button-next,
+.instalaciones-swiper .swiper-button-prev {
+    color: var(--primary-teal);
+    background-color: white;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.instalaciones-swiper .swiper-button-next:after,
+.instalaciones-swiper .swiper-button-prev:after {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.instalaciones-swiper .swiper-button-next:hover,
+.instalaciones-swiper .swiper-button-prev:hover {
+    background-color: var(--primary-teal);
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Paginación personalizada */
+.instalaciones-swiper .swiper-pagination {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 12px 24px;
+    border-radius: 30px;
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 25px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.instalaciones-swiper .swiper-pagination-bullet {
+    background-color: #cbd5e1;
+    width: 8px;
+    height: 8px;
+    opacity: 1;
+    transition: all 0.4s ease;
+    margin: 0 6px !important;
+    border-radius: 50%;
+}
+
+.instalaciones-swiper .swiper-pagination-bullet-active {
+    background-color: var(--primary-teal);
+    transform: scale(2.2);
+    box-shadow: 0 0 10px rgba(29, 172, 168, 0.6);
+}
+
+/* Responsive: Ajustar botones en móviles */
+@media (max-width: 640px) {
+    .instalaciones-swiper .swiper-button-next,
+    .instalaciones-swiper .swiper-button-prev {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .instalaciones-swiper .swiper-button-next:after,
+    .instalaciones-swiper .swiper-button-prev:after {
+        font-size: 16px;
+    }
+}

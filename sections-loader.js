@@ -14,6 +14,7 @@ const SECTIONS = [
     { id: 'header-placeholder', file: 'sections/header.html' },
     { id: 'hero-placeholder', file: 'sections/hero.html' },
     { id: 'services-placeholder', file: 'sections/services.html' },
+    { id: 'instalaciones-placeholder', file: 'sections/instalaciones.html' },
     { id: 'about-placeholder', file: 'sections/about.html' },
     { id: 'convenios-placeholder', file: 'sections/convenios.html' },
     { id: 'contact-placeholder', file: 'sections/contact.html' },
