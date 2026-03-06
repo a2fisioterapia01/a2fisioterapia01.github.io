@@ -11,6 +11,7 @@
  * Cada sección tiene un id y la ruta al archivo HTML
  */
 const SECTIONS = [
+    { id: 'header-placeholder', file: 'sections/header.html' },
     { id: 'services-placeholder', file: 'sections/services.html' },
     { id: 'instalaciones-placeholder', file: 'sections/instalaciones.html' },
     { id: 'about-placeholder', file: 'sections/about.html' },
