@@ -18,6 +18,7 @@ function initializeAll() {
     initializeModal();
     initializeSmoothScroll();
     updateWhatsAppLinks();
+    initializeMobileMenu();
 }
 
 /**
@@ -50,7 +51,8 @@ document.addEventListener('sectionsLoaded', function() {
     AOS.init({
         duration: 800,
         once: true,
-        offset: 100
+        offset: 100,
+        disable: 'mobile'
     });
     
     // Manejar scroll a sección si hay hash en la URL

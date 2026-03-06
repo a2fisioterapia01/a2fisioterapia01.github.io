@@ -178,27 +178,119 @@
 </head>
 <body class="bg-bg-light text-text-dark antialiased">
 
-    <!-- Contenedor para el header -->
-    <div id="header-placeholder"></div>
-    
+    <!-- ============================================
+         HEADER - BARRA DE NAVEGACIÓN (inlined para evitar CLS y mejorar LCP)
+         ============================================ -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <!-- Logo y marca -->
+            <div class="flex items-center space-x-2">
+                <a href="index.html">
+                    <picture>
+                        <source srcset="assets/logo.webp" type="image/webp">
+                        <img src="assets/logo.png" alt="A2 Fisioterapia" class="h-16 w-auto" width="64" height="64">
+                    </picture>
+                </a>
+            </div>
+
+            <!-- Navegación Desktop -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html#hero" class="text-text-dark hover:text-primary-teal transition duration-300 font-medium">Inicio</a>
+                <a href="index.html#servicios" class="text-text-dark hover:text-primary-teal transition duration-300 font-medium">Servicios</a>
+                <a href="index.html#equipo" class="text-text-dark hover:text-primary-teal transition duration-300 font-medium">Equipo</a>
+                <a href="index.html#instalaciones" class="text-text-dark hover:text-primary-teal transition duration-300 font-medium">Instalaciones</a>
+                <a href="index.html#convenios" class="text-text-dark hover:text-primary-teal transition duration-300 font-medium">Convenios</a>
+                <a href="index.html#contacto" class="text-text-dark hover:text-primary-teal transition duration-300 font-medium">Contacto</a>
+            </div>
+
+            <!-- Acciones Desktop (Redes + CTA) -->
+            <div class="hidden md:flex items-center space-x-6">
+                <div class="flex items-center space-x-5">
+                    <a href="https://www.instagram.com/a2fisioterapia_/" class="text-gray-600 hover:text-[#6a3a88] hover:scale-110 transition duration-300" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" data-whatsapp-link class="text-gray-600 hover:text-[#6a3a88] hover:scale-110 transition duration-300" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                    </a>
+                </div>
+                <a href="index.html#contacto" class="bg-primary-teal text-white py-2 px-4 rounded-full shadow-lg hover:bg-primary-teal-dark transition duration-300 font-semibold">
+                    Pedir Cita
+                </a>
+            </div>
+
+            <!-- Botón menú móvil -->
+            <button id="menu-button" class="md:hidden p-2 text-text-dark focus:outline-none" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Menú Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-inner pb-4">
+            <a href="index.html#hero" class="block px-4 py-2 text-text-dark hover:bg-bg-light">Inicio</a>
+            <a href="index.html#servicios" class="block px-4 py-2 text-text-dark hover:bg-bg-light">Servicios</a>
+            <a href="index.html#equipo" class="block px-4 py-2 text-text-dark hover:bg-bg-light">Equipo</a>
+            <a href="index.html#instalaciones" class="block px-4 py-2 text-text-dark hover:bg-bg-light">Instalaciones</a>
+            <a href="index.html#convenios" class="block px-4 py-2 text-text-dark hover:bg-bg-light">Convenios</a>
+            <a href="index.html#contacto" class="block px-4 py-2 text-text-dark hover:bg-bg-light">Contacto</a>
+            <div class="border-t border-gray-200 mt-2 pt-4 px-4 flex items-center justify-between">
+                <div class="flex items-center space-x-6">
+                    <a href="https://www.instagram.com/a2fisioterapia_/" class="text-gray-600 hover:text-[#6a3a88] hover:scale-110 transition duration-300" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" data-whatsapp-link class="text-gray-600 hover:text-[#6a3a88] hover:scale-110 transition duration-300" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                    </a>
+                </div>
+                <a href="index.html#contacto" class="bg-primary-teal text-white px-4 py-2 rounded-lg font-semibold hover:bg-primary-teal-dark transition duration-300 text-sm">
+                    Pedir Cita
+                </a>
+            </div>
+        </div>
+    </header>
+
     <main>
-    <!-- Contenedor para el hero -->
-    <div id="hero-placeholder"></div>
-    
+    <!-- ============================================
+         SECCIÓN HERO (inlined para LCP inmediato)
+         ============================================ -->
+    <section id="hero" class="relative h-[600px] sm:h-[700px] flex items-center">
+        <picture>
+            <source srcset="assets/home.webp" type="image/webp">
+            <img src="assets/home.png" alt="" class="absolute inset-0 w-full h-full object-cover object-[75%_center] sm:object-[center_top]" width="1920" height="700" fetchpriority="high">
+        </picture>
+        <div class="absolute inset-0 bg-white/50"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="md:w-1/2 lg:w-5/12">
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight mb-2 text-text-dark uppercase tracking-tight">
+                    Recupera tu <br>Movimiento
+                </h1>
+                <h2 class="text-2xl sm:text-3xl font-bold text-primary-teal mb-8">
+                    Avanza y Actívate
+                </h2>
+                <div class="flex flex-col items-center sm:items-start sm:flex-row gap-4">
+                    <a href="#servicios" class="inline-flex items-center bg-primary-teal text-white py-4 px-10 rounded-xl text-sm font-bold shadow-xl hover:bg-primary-teal-dark transition duration-300 hover:-translate-y-1 uppercase whitespace-nowrap w-fit">
+                        Descubre nuestros tratamientos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contenedor para la sección "Servicios" -->
-    <div id="services-placeholder"></div>
+    <div id="services-placeholder" style="min-height:600px"></div>
 
     <!-- Contenedor para la sección "Equipo" -->
-    <div id="about-placeholder"></div>
+    <div id="about-placeholder" style="min-height:400px"></div>
 
     <!-- Contenedor para la sección "Instalaciones" -->
-    <div id="instalaciones-placeholder"></div>
+    <div id="instalaciones-placeholder" style="min-height:500px"></div>
 
     <!-- Contenedor para la sección "Convenios" -->
-    <div id="convenios-placeholder"></div>
+    <div id="convenios-placeholder" style="min-height:300px"></div>
     
     <!-- Contenedor para la sección "Contacto" -->
-    <div id="contact-placeholder"></div>
+    <div id="contact-placeholder" style="min-height:400px"></div>
     </main>
     
     <!-- Contenedor para el footer -->

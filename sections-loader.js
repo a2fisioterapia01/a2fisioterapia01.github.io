@@ -11,8 +11,6 @@
  * Cada sección tiene un id y la ruta al archivo HTML
  */
 const SECTIONS = [
-    { id: 'header-placeholder', file: 'sections/header.html' },
-    { id: 'hero-placeholder', file: 'sections/hero.html' },
     { id: 'services-placeholder', file: 'sections/services.html' },
     { id: 'instalaciones-placeholder', file: 'sections/instalaciones.html' },
     { id: 'about-placeholder', file: 'sections/about.html' },
@@ -33,7 +31,7 @@ async function loadSection(elementId, filePath) {
         // Usar XMLHttpRequest en lugar de fetch para evitar problemas con Live Server
         const html = await new Promise((resolve, reject) => {
             const xhr = new XMLHttpRequest();
-            xhr.open('GET', filePath + '?t=' + Date.now(), true);
+            xhr.open('GET', filePath, true);
             xhr.responseType = 'text';
             xhr.onload = function() {
                 if (xhr.status === 200) {
@@ -52,9 +50,6 @@ async function loadSection(elementId, filePath) {
         
         if (element) {
             element.innerHTML = html;
-            
-            // Forzar reflow para asegurar que el navegador procese el HTML
-            element.offsetHeight;
         }
         
     } catch (error) {

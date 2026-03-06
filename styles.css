@@ -2,8 +2,7 @@
    A2 FISIOTERAPIA - Estilos Personalizados
    ============================================ */
 
-/* Importar fuente de Google Fonts optimizada - solo pesos necesarios con font-display: swap */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+/* Google Fonts se carga mediante <link> en index.html con preload — no duplicar aquí con @import */
 
 /* Las variables CSS están centralizadas en config.css */
 
