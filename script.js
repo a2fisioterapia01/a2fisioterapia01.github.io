@@ -7,8 +7,10 @@ const WHATSAPP_MESSAGE = 'Hola, quisiera más información sobre sus servicios.'
 
 // Esperar a que el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', function() {
-    // Inicializar inmediatamente ya que el header es estático
     initializeAll();
+    if (document.getElementById('servicios')) {
+        onPageContentReady();
+    }
 });
 
 /**
@@ -34,71 +36,62 @@ function updateWhatsAppLinks() {
     });
 }
 
-// Escuchar evento de carga de secciones para actualizar enlaces en el footer y otras secciones
-document.addEventListener('sectionsLoaded', function() {
-    updateWhatsAppLinks();
-    
-    // Inicializar menú móvil después de que el header se haya cargado
-    initializeMobileMenu();
-    
-    // Inicializar formulario de contacto después de que se haya cargado
-    initializeContactForm();
-    
-    // Inicializar Swipers
-    initSwipers();
+// La portada ya trae el HTML. El resto de páginas sigue inyectando header y footer.
+let pageContentReady = false;
+document.addEventListener('sectionsLoaded', onPageContentReady);
 
-    // Inicializar AOS con configuración global
-    AOS.init({
-        duration: 800,
-        once: true,
-        offset: 100,
-        disable: 'mobile'
-    });
-    
-    // Manejar scroll a sección si hay hash en la URL
-    handleHashNavigation();
-});
-
-function initSwipers() {
-    if (typeof Swiper === 'undefined') {
+function onPageContentReady() {
+    if (pageContentReady) {
         return;
     }
+    pageContentReady = true;
 
-    // Inicializar carrusel de instalaciones
-    if (document.querySelector('.instalaciones-swiper')) {
-        new Swiper('.instalaciones-swiper', {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-                dynamicBullets: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 30,
-                },
-                1024: {
-                    slidesPerView: 2,
-                    spaceBetween: 40,
-                }
-            }
+    updateWhatsAppLinks();
+    initializeMobileMenu();
+    initializeContactForm();
+    initializeModal();
+    initSwipers();
+
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+            disable: 'mobile'
         });
     }
 
+    handleHashNavigation();
+}
+
+function initSwipers() {
+    // Swiper llega por CDN y la sección se inyecta en paralelo.
+    // Si el carrusel se pinta antes de que el script exista, reintentamos.
+    if (typeof Swiper === 'undefined') {
+        if (!initSwipers.waiting) {
+            initSwipers.waiting = true;
+            const started = Date.now();
+            const timer = setInterval(function () {
+                if (typeof Swiper !== 'undefined') {
+                    clearInterval(timer);
+                    initSwipers.waiting = false;
+                    initSwipers();
+                } else if (Date.now() - started > 10000) {
+                    clearInterval(timer);
+                    initSwipers.waiting = false;
+                }
+            }, 50);
+        }
+        return;
+    }
+
+    initSwipers.waiting = false;
+    initInstalacionesGallery();
+
     // Inicializar carruseles si existen (por ejemplo en servicios-completos.html)
-    if (document.querySelector('.services-swiper')) {
-        new Swiper('.services-swiper', {
+    const servicesEl = document.querySelector('.services-swiper');
+    if (servicesEl && !servicesEl.swiper) {
+        new Swiper(servicesEl, {
             slidesPerView: 1,
             spaceBetween: 20,
             loop: true,
@@ -112,6 +105,150 @@ function initSwipers() {
             },
         });
     }
+}
+
+/** Estado del lightbox de instalaciones */
+let instalacionesLightboxSwiper = null;
+let instalacionesLightboxLastFocus = null;
+
+/**
+ * Grid de instalaciones + lightbox con las 12 fotos en carrusel.
+ */
+function initInstalacionesGallery() {
+    const root = document.getElementById('instalaciones');
+    const lightbox = document.getElementById('instalaciones-lightbox');
+
+    if (!root || !lightbox || root.dataset.galleryReady === 'true') {
+        return;
+    }
+    root.dataset.galleryReady = 'true';
+
+    const closeBtn = lightbox.querySelector('.instalaciones-lightbox-close');
+    const triggers = root.querySelectorAll('[data-gallery-index]');
+
+    triggers.forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+            const index = parseInt(trigger.getAttribute('data-gallery-index'), 10);
+            openInstalacionesLightbox(Number.isFinite(index) ? index : 0);
+        });
+    });
+
+    closeBtn.addEventListener('click', closeInstalacionesLightbox);
+
+    lightbox.addEventListener('click', function (event) {
+        if (event.target === lightbox) {
+            closeInstalacionesLightbox();
+        }
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key !== 'Escape' || lightbox.classList.contains('hidden')) {
+            return;
+        }
+        event.preventDefault();
+        closeInstalacionesLightbox();
+    });
+}
+
+function ensureInstalacionesLightboxSwiper() {
+    if (instalacionesLightboxSwiper) {
+        return instalacionesLightboxSwiper;
+    }
+
+    const lightbox = document.getElementById('instalaciones-lightbox');
+    const swiperEl = lightbox && lightbox.querySelector('.instalaciones-lightbox-swiper');
+
+    if (!swiperEl || typeof Swiper === 'undefined') {
+        return null;
+    }
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const currentEl = lightbox.querySelector('.instalaciones-lightbox-counter .is-current');
+    const totalEl = lightbox.querySelector('.instalaciones-lightbox-counter .is-total');
+
+    function syncInstalacionesLightboxCounter(sw) {
+        const slideCount = swiperEl.querySelectorAll('.swiper-wrapper > .swiper-slide').length;
+        const index = sw.realIndex + 1;
+        if (currentEl) currentEl.textContent = String(index).padStart(2, '0');
+        if (totalEl) totalEl.textContent = String(slideCount).padStart(2, '0');
+    }
+
+    instalacionesLightboxSwiper = new Swiper(swiperEl, {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        speed: reduceMotion ? 0 : 450,
+        rewind: true,
+        grabCursor: true,
+        keyboard: {
+            enabled: true,
+            onlyInViewport: false,
+        },
+        navigation: {
+            nextEl: lightbox.querySelector('.instalaciones-lightbox-next'),
+            prevEl: lightbox.querySelector('.instalaciones-lightbox-prev'),
+        },
+        a11y: {
+            enabled: true,
+            prevSlideMessage: 'Foto anterior',
+            nextSlideMessage: 'Foto siguiente',
+            slideLabelMessage: 'Foto {{index}} de {{slidesLength}}',
+        },
+        on: {
+            init: syncInstalacionesLightboxCounter,
+            slideChange: syncInstalacionesLightboxCounter,
+        },
+    });
+
+    syncInstalacionesLightboxCounter(instalacionesLightboxSwiper);
+
+    return instalacionesLightboxSwiper;
+}
+
+function openInstalacionesLightbox(startIndex) {
+    const lightbox = document.getElementById('instalaciones-lightbox');
+    if (!lightbox) {
+        return;
+    }
+
+    const swiper = ensureInstalacionesLightboxSwiper();
+    if (!swiper) {
+        return;
+    }
+
+    instalacionesLightboxLastFocus = document.activeElement;
+    lightbox.classList.remove('hidden');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+
+    swiper.slideTo(startIndex, 0);
+    swiper.update();
+
+    const currentEl = lightbox.querySelector('.instalaciones-lightbox-counter .is-current');
+    const totalEl = lightbox.querySelector('.instalaciones-lightbox-counter .is-total');
+    const slideCount = lightbox.querySelectorAll('.instalaciones-lightbox-swiper .swiper-slide').length;
+    if (currentEl) currentEl.textContent = String(startIndex + 1).padStart(2, '0');
+    if (totalEl) totalEl.textContent = String(slideCount).padStart(2, '0');
+
+    const closeBtn = lightbox.querySelector('.instalaciones-lightbox-close');
+    if (closeBtn) {
+        closeBtn.focus();
+    }
+}
+
+function closeInstalacionesLightbox() {
+    const lightbox = document.getElementById('instalaciones-lightbox');
+    if (!lightbox || lightbox.classList.contains('hidden')) {
+        return;
+    }
+
+    lightbox.classList.add('hidden');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+
+    if (instalacionesLightboxLastFocus && typeof instalacionesLightboxLastFocus.focus === 'function') {
+        instalacionesLightboxLastFocus.focus();
+    }
+    instalacionesLightboxLastFocus = null;
 }
 
 
@@ -196,9 +333,10 @@ function closeMobileMenu(menu) {
 function initializeContactForm() {
     const form = document.querySelector('#contacto form');
 
-    if (!form) {
+    if (!form || form.dataset.ready === 'true') {
         return;
     }
+    form.dataset.ready = 'true';
 
     form.addEventListener('submit', handleFormSubmit);
 }
@@ -285,9 +423,10 @@ function validateFormData(data) {
 function initializeModal() {
     const modal = document.getElementById('confirmation-modal');
 
-    if (!modal) {
+    if (!modal || modal.dataset.ready === 'true') {
         return;
     }
+    modal.dataset.ready = 'true';
 
     // Cerrar modal al hacer clic fuera del contenido
     modal.addEventListener('click', (e) => {

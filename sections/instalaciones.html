@@ -1,9 +1,8 @@
 <!-- ============================================
-     INSTALACIONES - Carrusel de Fotos
+     INSTALACIONES - Grid + lightbox
      ============================================ -->
 <section id="instalaciones" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Título de la sección -->
         <div class="text-center mb-12" data-aos="fade-up">
             <h2 class="text-3xl md:text-4xl font-bold text-text-dark mb-4">
                 Nuestras <span class="text-primary-teal">Instalaciones</span>
@@ -13,156 +12,175 @@
             </p>
         </div>
 
-        <!-- Carrusel de instalaciones -->
-        <div class="max-w-6xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-            <div class="swiper instalaciones-swiper">
-                <div class="swiper-wrapper">
-                    <!-- Slide 1 -->
-                    <div class="swiper-slide">
-                        <div class="relative overflow-hidden rounded-lg shadow-xl instalaciones-slide">
-                            <picture>
-                                <source srcset="assets/instalaciones/instalaciones1.webp" type="image/webp">
-                                <img src="assets/instalaciones/instalaciones1.jpeg" 
-                                     alt="Instalaciones A2 Fisioterapia 1" 
-                                     class="instalaciones-img"
-                                     loading="lazy">
-                            </picture>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 2 -->
-                    <div class="swiper-slide">
-                        <div class="relative overflow-hidden rounded-lg shadow-xl instalaciones-slide">
-                            <picture>
-                                <source srcset="assets/instalaciones/instalaciones2.webp" type="image/webp">
-                                <img src="assets/instalaciones/instalaciones2.jpeg" 
-                                     alt="Instalaciones A2 Fisioterapia 2" 
-                                     class="instalaciones-img"
-                                     loading="lazy">
-                            </picture>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 3 -->
-                    <div class="swiper-slide">
-                        <div class="relative overflow-hidden rounded-lg shadow-xl instalaciones-slide">
-                            <picture>
-                                <source srcset="assets/instalaciones/instalaciones3.webp" type="image/webp">
-                                <img src="assets/instalaciones/instalaciones3.jpeg" 
-                                     alt="Instalaciones A2 Fisioterapia 3" 
-                                     class="instalaciones-img"
-                                     loading="lazy">
-                            </picture>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 4 -->
-                    <div class="swiper-slide">
-                        <div class="relative overflow-hidden rounded-lg shadow-xl instalaciones-slide">
-                            <picture>
-                                <source srcset="assets/instalaciones/instalaciones4.webp" type="image/webp">
-                                <img src="assets/instalaciones/instalaciones4.jpeg" 
-                                     alt="Instalaciones A2 Fisioterapia 4" 
-                                     class="instalaciones-img"
-                                     loading="lazy">
-                            </picture>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 5 -->
-                    <div class="swiper-slide">
-                        <div class="relative overflow-hidden rounded-lg shadow-xl instalaciones-slide">
-                            <picture>
-                                <source srcset="assets/instalaciones/instalaciones5.webp" type="image/webp">
-                                <img src="assets/instalaciones/instalaciones5.jpeg" 
-                                     alt="Instalaciones A2 Fisioterapia 5" 
-                                     class="instalaciones-img"
-                                     loading="lazy">
-                            </picture>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 6 -->
-                    <div class="swiper-slide">
-                        <div class="relative overflow-hidden rounded-lg shadow-xl instalaciones-slide">
-                            <picture>
-                                <source srcset="assets/instalaciones/instalaciones6.webp" type="image/webp">
-                                <img src="assets/instalaciones/instalaciones6.jpeg" 
-                                     alt="Instalaciones A2 Fisioterapia 6" 
-                                     class="instalaciones-img"
-                                     loading="lazy">
-                            </picture>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 7 -->
-                    <div class="swiper-slide">
-                        <div class="relative overflow-hidden rounded-lg shadow-xl instalaciones-slide">
-                            <picture>
-                                <source srcset="assets/instalaciones/instalaciones7.webp" type="image/webp">
-                                <img src="assets/instalaciones/instalaciones7.jpeg" 
-                                     alt="Instalaciones A2 Fisioterapia 7" 
-                                     class="instalaciones-img"
-                                     loading="lazy">
-                            </picture>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 8 -->
-                    <div class="swiper-slide">
-                        <div class="relative overflow-hidden rounded-lg shadow-xl instalaciones-slide">
-                            <picture>
-                                <source srcset="assets/instalaciones/instalaciones8.webp" type="image/webp">
-                                <img src="assets/instalaciones/instalaciones8.jpeg" 
-                                     alt="Instalaciones A2 Fisioterapia 8" 
-                                     class="instalaciones-img"
-                                     loading="lazy">
-                            </picture>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 9 -->
-                    <div class="swiper-slide">
-                        <div class="relative overflow-hidden rounded-lg shadow-xl instalaciones-slide">
-                            <picture>
-                                <source srcset="assets/instalaciones/instalaciones9.webp" type="image/webp">
-                                <img src="assets/instalaciones/instalaciones9.jpeg" 
-                                     alt="Instalaciones A2 Fisioterapia 9" 
-                                     class="instalaciones-img"
-                                     loading="lazy">
-                            </picture>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Controles de navegación -->
-                <div class="swiper-button-next text-primary-teal"></div>
-                <div class="swiper-button-prev text-primary-teal"></div>
-                
-                <!-- Paginación -->
-                <div class="swiper-pagination"></div>
+        <!-- Vista previa: 6 fotos destacadas -->
+        <div class="instalaciones-gallery" data-aos="fade-up" data-aos-delay="100">
+            <div class="instalaciones-grid" role="list">
+                <button type="button" class="instalaciones-grid-item" data-gallery-index="0" role="listitem"
+                        aria-label="Ampliar: sala de espera">
+                    <picture>
+                        <source srcset="assets/instalaciones/instalaciones1.webp" type="image/webp">
+                        <img src="assets/instalaciones/instalaciones1.jpeg" alt="" width="1512" height="1210" loading="eager" decoding="async" draggable="false">
+                    </picture>
+                </button>
+                <button type="button" class="instalaciones-grid-item" data-gallery-index="1" role="listitem"
+                        aria-label="Ampliar: sala de pilates">
+                    <picture>
+                        <source srcset="assets/instalaciones/instalaciones2.webp" type="image/webp">
+                        <img src="assets/instalaciones/instalaciones2.jpeg" alt="" width="1512" height="1210" loading="lazy" decoding="async" draggable="false">
+                    </picture>
+                </button>
+                <button type="button" class="instalaciones-grid-item" data-gallery-index="2" role="listitem"
+                        aria-label="Ampliar: cabina de tratamiento">
+                    <picture>
+                        <source srcset="assets/instalaciones/instalaciones3.webp" type="image/webp">
+                        <img src="assets/instalaciones/instalaciones3.jpeg" alt="" width="1512" height="1210" loading="lazy" decoding="async" draggable="false">
+                    </picture>
+                </button>
+                <button type="button" class="instalaciones-grid-item" data-gallery-index="9" role="listitem"
+                        aria-label="Ampliar: logotipo en recepción">
+                    <picture>
+                        <source srcset="assets/instalaciones/instalaciones10.webp" type="image/webp">
+                        <img src="assets/instalaciones/instalaciones10.jpeg" alt="" width="1024" height="683" loading="lazy" decoding="async" draggable="false">
+                    </picture>
+                </button>
+                <button type="button" class="instalaciones-grid-item" data-gallery-index="8" role="listitem"
+                        aria-label="Ampliar: recepción">
+                    <picture>
+                        <source srcset="assets/instalaciones/instalaciones9.webp" type="image/webp">
+                        <img src="assets/instalaciones/instalaciones9.jpeg" alt="" width="1512" height="1210" loading="lazy" decoding="async" draggable="false">
+                    </picture>
+                </button>
+                <button type="button" class="instalaciones-grid-item" data-gallery-index="11" role="listitem"
+                        aria-label="Ampliar: modelos anatómicos">
+                    <picture>
+                        <source srcset="assets/instalaciones/instalaciones12.webp" type="image/webp">
+                        <img src="assets/instalaciones/instalaciones12.jpeg" alt="" width="1024" height="683" loading="lazy" decoding="async" draggable="false">
+                    </picture>
+                </button>
             </div>
+
+            <p class="instalaciones-gallery-cta">
+                <button type="button" class="instalaciones-gallery-all" data-gallery-index="0">
+                    Ver galería completa
+                    <span class="instalaciones-gallery-all-count">12 fotos</span>
+                </button>
+            </p>
         </div>
 
-        <!-- Características adicionales (opcional) -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 max-w-5xl mx-auto" data-aos="fade-up" data-aos-delay="200">
             <div class="text-center p-6 bg-gray-50 rounded-lg">
                 <i class="fas fa-check-circle text-4xl text-primary-teal mb-3"></i>
                 <h3 class="font-semibold text-lg mb-2">Instalaciones Modernas</h3>
                 <p class="text-gray-600 text-sm">Equipadas con la última tecnología en fisioterapia</p>
             </div>
-            
             <div class="text-center p-6 bg-gray-50 rounded-lg">
                 <i class="fas fa-dumbbell text-4xl text-primary-teal mb-3"></i>
                 <h3 class="font-semibold text-lg mb-2">Sala de Pilates</h3>
                 <p class="text-gray-600 text-sm">Espacio dedicado con máquinas especializadas</p>
             </div>
-            
             <div class="text-center p-6 bg-gray-50 rounded-lg">
                 <i class="fas fa-heart text-4xl text-primary-teal mb-3"></i>
                 <h3 class="font-semibold text-lg mb-2">Ambiente Acogedor</h3>
                 <p class="text-gray-600 text-sm">Diseñado para tu comodidad y recuperación</p>
             </div>
+        </div>
+    </div>
+
+    <!-- Lightbox: las 12 fotos en carrusel -->
+    <div id="instalaciones-lightbox" class="instalaciones-lightbox hidden" role="dialog" aria-modal="true" aria-label="Galería de instalaciones" aria-hidden="true">
+        <button type="button" class="instalaciones-lightbox-close" aria-label="Cerrar galería">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M6 6 L18 18 M18 6 L6 18"/></svg>
+        </button>
+
+        <p class="instalaciones-lightbox-counter" aria-live="polite">
+            <span class="is-current">01</span><span class="is-sep" aria-hidden="true">/</span><span class="is-total">12</span>
+        </p>
+
+        <div class="instalaciones-lightbox-stage">
+            <button type="button" class="instalaciones-lightbox-arrow instalaciones-lightbox-prev" aria-label="Foto anterior">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5 L8 12 L15 19"/></svg>
+            </button>
+
+            <div class="swiper instalaciones-lightbox-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="assets/instalaciones/instalaciones1.webp" type="image/webp">
+                            <img src="assets/instalaciones/instalaciones1.jpeg" alt="Sala de espera con sillas y el logotipo de A2 Fisioterapia" class="instalaciones-lightbox-img" width="1512" height="1210" decoding="async" draggable="false">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="assets/instalaciones/instalaciones2.webp" type="image/webp">
+                            <img src="assets/instalaciones/instalaciones2.jpeg" alt="Sala de pilates con springboards, fitballs y material de ejercicio" class="instalaciones-lightbox-img" width="1512" height="1210" decoding="async" draggable="false">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="assets/instalaciones/instalaciones3.webp" type="image/webp">
+                            <img src="assets/instalaciones/instalaciones3.jpeg" alt="Cabina de tratamiento con camilla, ecógrafo y equipo de electroterapia" class="instalaciones-lightbox-img" width="1512" height="1210" decoding="async" draggable="false">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="assets/instalaciones/instalaciones4.webp" type="image/webp">
+                            <img src="assets/instalaciones/instalaciones4.jpeg" alt="Detalle de los springboards y las fitballs de la sala de pilates" class="instalaciones-lightbox-img" width="1512" height="1210" decoding="async" draggable="false">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="assets/instalaciones/instalaciones5.webp" type="image/webp">
+                            <img src="assets/instalaciones/instalaciones5.jpeg" alt="Cabina de tratamiento con camilla, zona de consulta y material terapéutico" class="instalaciones-lightbox-img" width="1512" height="1210" decoding="async" draggable="false">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="assets/instalaciones/instalaciones6.webp" type="image/webp">
+                            <img src="assets/instalaciones/instalaciones6.jpeg" alt="Equipo de electroterapia Globus sobre un carro auxiliar" class="instalaciones-lightbox-img" width="1512" height="1210" decoding="async" draggable="false">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="assets/instalaciones/instalaciones7.webp" type="image/webp">
+                            <img src="assets/instalaciones/instalaciones7.jpeg" alt="Ecógrafo Chison del centro" class="instalaciones-lightbox-img" width="1512" height="1210" decoding="async" draggable="false">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="assets/instalaciones/instalaciones8.webp" type="image/webp">
+                            <img src="assets/instalaciones/instalaciones8.jpeg" alt="Despacho de consulta con mesa y sillas" class="instalaciones-lightbox-img" width="1512" height="1210" decoding="async" draggable="false">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="assets/instalaciones/instalaciones9.webp" type="image/webp">
+                            <img src="assets/instalaciones/instalaciones9.jpeg" alt="Recepción del centro con el mostrador de madera" class="instalaciones-lightbox-img" width="1512" height="1210" decoding="async" draggable="false">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="assets/instalaciones/instalaciones10.webp" type="image/webp">
+                            <img src="assets/instalaciones/instalaciones10.jpeg" alt="Logotipo de A2 Fisioterapia en la pared de recepción, junto al listado de servicios" class="instalaciones-lightbox-img" width="1024" height="683" decoding="async" draggable="false">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="assets/instalaciones/instalaciones11.webp" type="image/webp">
+                            <img src="assets/instalaciones/instalaciones11.jpeg" alt="Tarjetas del centro en el mostrador de recepción" class="instalaciones-lightbox-img" width="1024" height="683" decoding="async" draggable="false">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="assets/instalaciones/instalaciones12.webp" type="image/webp">
+                            <img src="assets/instalaciones/instalaciones12.jpeg" alt="Modelos anatómicos de columna, pelvis y hombro junto a la ventana" class="instalaciones-lightbox-img" width="1024" height="683" decoding="async" draggable="false">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="instalaciones-lightbox-arrow instalaciones-lightbox-next" aria-label="Foto siguiente">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5 L16 12 L9 19"/></svg>
+            </button>
         </div>
     </div>
 </section>

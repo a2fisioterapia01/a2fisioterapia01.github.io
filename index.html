@@ -12,20 +12,20 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://a2fisioterapia.com/">
-    <meta property="og:title" content="A2 Fisioterapia | Avanza y Actívate">
-    <meta property="og:description" content="Centro de fisioterapia especializado en tratamientos deportivos, traumatológicos, ATM y suelo pélvico. Recupera tu bienestar con profesionales colegiados.">
+    <meta property="og:title" content="A2 Fisioterapia Bolaños de Calatrava">
+    <meta property="og:description" content="Centro de fisioterapia en Bolaños de Calatrava. Tratamientos deportivos, traumatológicos, Pilates terapéutico y rehabilitación. Pide cita.">
     <meta property="og:image" content="https://a2fisioterapia.com/assets/og-image.png">
     <meta property="og:locale" content="es_ES">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://a2fisioterapia.com/">
-    <meta name="twitter:title" content="A2 Fisioterapia Bolaños de Calatrava | Tratamientos de Recuperación">
+    <meta name="twitter:title" content="A2 Fisioterapia Bolaños de Calatrava">
     <meta name="twitter:description" content="Centro de fisioterapia en Bolaños de Calatrava. Especialistas en tratamientos personalizados.">
     <meta name="twitter:image" content="https://a2fisioterapia.com/assets/og-image.png">
     <meta name="theme-color" content="#6a3a88">
     
-    <title>A2 Fisioterapia | Avanza y Actívate</title>
+    <title>A2 Fisioterapia Bolaños de Calatrava</title>
     <link rel="icon" type="image/png" href="assets/favicon.png">
     
     <!-- Preconnect para CDNs y recursos externos -->
@@ -41,8 +41,7 @@
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     
     <!-- Preload recursos críticos para mejorar LCP -->
-    <link rel="preload" href="assets/home.png" as="image" fetchpriority="high" type="image/png">
-    <link rel="preload" href="assets/logo.png" as="image" fetchpriority="high" type="image/png">
+    <link rel="preload" href="assets/home.webp" as="image" fetchpriority="high" type="image/webp">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style">
     
     <!-- CSS Crítico Inline para Above-the-Fold -->
@@ -61,6 +60,7 @@
         #hero{position:relative;height:600px;display:flex;align-items:center;}
         #hero .absolute{position:absolute;}
         #hero .inset-0{top:0;right:0;bottom:0;left:0;}
+        #hero .bg-white\/50{background-color:rgba(255,255,255,.5);}
         /* Botón CTA Crítico */
         .bg-primary-teal{background-color:var(--primary-teal);}
         .text-white{color:#fff;}
@@ -115,8 +115,8 @@
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "38.9833",
-        "longitude": "-3.8500"
+        "latitude": "38.909402",
+        "longitude": "-3.663129"
       },
       "openingHoursSpecification": [
         {
@@ -128,8 +128,8 @@
         {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": "Friday",
-          "opens": "09:00",
-          "closes": "14:00"
+          "opens": "08:00",
+          "closes": "19:00"
         }
       ],
       "priceRange": "€€",
@@ -139,40 +139,6 @@
         "https://www.facebook.com/a2fisioterapia"
       ],
       "medicalSpecialty": "PhysicalMedicine"
-    }
-    </script>
-    
-    <!-- FAQ Schema para preguntas frecuentes -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "¿Qué servicios de fisioterapia ofrecen en A2 Fisioterapia?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Ofrecemos tratamientos personalizados, Pilates (máquinas y suelo), fisioterapia deportiva, rehabilitación postquirúrgica, ATM, suelo pélvico y fisioterapia a domicilio."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Cuál es el horario de A2 Fisioterapia?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Atendemos de lunes a jueves de 9:00 a 21:00 y viernes de 9:00 a 14:00."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Dónde está ubicada la clínica A2 Fisioterapia?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Estamos en C. Sancho Panza, 9, 13260 Bolaños de Calatrava, Ciudad Real."
-          }
-        }
-      ]
     }
     </script>
 </head>
@@ -257,7 +223,7 @@
     <section id="hero" class="relative h-[600px] sm:h-[700px] flex items-center">
         <picture>
             <source srcset="assets/home.webp" type="image/webp">
-            <img src="assets/home.png" alt="" class="absolute inset-0 w-full h-full object-cover object-[75%_center] sm:object-[center_top]" width="1920" height="700" fetchpriority="high">
+            <img src="assets/home.png" alt="Sala del centro A2 Fisioterapia en Bolaños de Calatrava" class="absolute inset-0 w-full h-full object-cover object-[60%_center] sm:object-center" width="1024" height="683" fetchpriority="high">
         </picture>
         <div class="absolute inset-0 bg-white/50"></div>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -277,27 +243,786 @@
         </div>
     </section>
 
-    <!-- Contenedor para la sección "Servicios" -->
-    <div id="services-placeholder" style="min-height:600px"></div>
+<!-- ============================================
+     SECCIÓN SERVICIOS
+     ============================================ -->
+<section id="servicios" class="py-16 sm:py-24 bg-bg-light">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 data-aos="fade-down" class="text-4xl font-extrabold text-text-dark mb-4">
+                Nuestros Tratamientos para una Vida sin Límites
+            </h2>
+            <p data-aos="fade-up" class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                Tu cuerpo es el motor de tu vida; nosotros nos encargamos de ponerlo a punto. Con <strong>tratamientos de vanguardia y atención exclusiva</strong>, transformamos cada sesión en un paso firme hacia tu mejor versión.
+            </p>
+        </div>
 
-    <!-- Contenedor para la sección "Equipo" -->
-    <div id="about-placeholder" style="min-height:400px"></div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Servicio 1: Tratamientos personalizados -->
+            <div data-aos="fade-up" class="group bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-50 hover:-translate-y-1 flex flex-col overflow-hidden">
+                <div class="servicio-card-media bg-gradient-to-br from-purple-100 to-purple-50">
+                    <picture>
+                        <source srcset="assets/servicios/tratamientos-personalizados.webp" type="image/webp">
+                        <img src="assets/servicios/tratamientos-personalizados.jpg" alt="Tratamientos Personalizados" class="servicio-card-img servicio-card-img--tratamientos" width="1024" height="683" loading="lazy" onerror="this.style.display='none'">
+                    </picture>
+                </div>
+                <div class="relative">
+                    <div class="absolute left-1/2 -translate-x-1/2 -top-8 w-16 h-16 flex items-center justify-center rounded-full bg-white text-primary-teal group-hover:bg-primary-teal group-hover:text-white text-2xl shadow-lg transition-colors duration-300">
+                        <i class="fas fa-hand-holding-medical"></i>
+                    </div>
+                </div>
+                <div class="p-6 pt-12 flex flex-col flex-1">
+                    <h3 class="text-lg font-bold mb-2 text-gray-800 text-center">Tratamientos Personalizados</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed flex-1 text-center">Planes de tratamiento adaptados a tus necesidades específicas para garantizar los mejores resultados.</p>
+                </div>
+            </div>
 
-    <!-- Contenedor para la sección "Instalaciones" -->
-    <div id="instalaciones-placeholder" style="min-height:500px"></div>
+            <!-- Servicio 2: Pilates máquinas + suelo -->
+            <div data-aos="fade-up" data-aos-delay="100" class="group bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-50 hover:-translate-y-1 flex flex-col overflow-hidden">
+                <div class="servicio-card-media bg-gradient-to-br from-pink-100 to-pink-50">
+                    <picture>
+                        <source srcset="assets/servicios/pilates.webp" type="image/webp">
+                        <img src="assets/servicios/pilates.jpg" alt="Pilates Máquinas + Suelo" class="servicio-card-img servicio-card-img--pilates" width="1024" height="683" loading="lazy" onerror="this.style.display='none'">
+                    </picture>
+                </div>
+                <div class="relative">
+                    <div class="absolute left-1/2 -translate-x-1/2 -top-8 w-16 h-16 flex items-center justify-center rounded-full bg-white text-primary-teal group-hover:bg-primary-teal group-hover:text-white text-2xl shadow-lg transition-colors duration-300">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                </div>
+                <div class="p-6 pt-12 flex flex-col flex-1">
+                    <h3 class="text-lg font-bold mb-2 text-gray-800 text-center">Pilates Máquinas + Suelo</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed flex-1 text-center">Mejora tu postura, fuerza y flexibilidad combinando ejercicios en suelo y con equipamiento especializado.</p>
+                    <div class="mt-4 text-center">
+                        <a href="servicios-completos.html#pilates" class="inline-block text-primary-teal py-1 px-3 rounded-full border border-primary-teal text-sm font-medium hover:bg-primary-teal/5 transition">Ver horarios</a>
+                    </div>
+                </div>
+            </div>
 
-    <!-- Contenedor para la sección "Convenios" -->
-    <div id="convenios-placeholder" style="min-height:300px"></div>
-    
-    <!-- Contenedor para la sección "Contacto" -->
-    <div id="contact-placeholder" style="min-height:400px"></div>
+            <!-- Servicio 3: Tecnología avanzada -->
+            <div data-aos="fade-up" data-aos-delay="200" class="group bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-50 hover:-translate-y-1 flex flex-col overflow-hidden">
+                <div class="servicio-card-media bg-gradient-to-br from-blue-100 to-blue-50">
+                    <picture>
+                        <source srcset="assets/servicios/tecnologia.webp" type="image/webp">
+                        <img src="assets/servicios/tecnologia.jpg" alt="Tecnología Avanzada" class="servicio-card-img servicio-card-img--tecnologia" width="1024" height="683" loading="lazy" onerror="this.style.display='none'">
+                    </picture>
+                </div>
+                <div class="relative">
+                    <div class="absolute left-1/2 -translate-x-1/2 -top-8 w-16 h-16 flex items-center justify-center rounded-full bg-white text-primary-teal group-hover:bg-primary-teal group-hover:text-white text-2xl shadow-lg transition-colors duration-300">
+                        <i class="fas fa-wave-square"></i>
+                    </div>
+                </div>
+                <div class="p-6 pt-12 flex flex-col flex-1">
+                    <h3 class="text-lg font-bold mb-2 text-gray-800 text-center">Tecnología Avanzada</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed flex-1 text-center">Ecografía terapéutica, neuromodulación, EPI, radiofrecuencia, presoterapia y Cryopush para acelerar tu recuperación.</p>
+                    <div class="mt-4 text-center">
+                        <a href="servicios-completos.html#tecnologia" class="inline-block text-primary-teal py-1 px-3 rounded-full border border-primary-teal text-sm font-medium hover:bg-primary-teal/5 transition">Ver equipamiento</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicio 4: Recuperación de lesiones deportivas -->
+            <div data-aos="fade-up" data-aos-delay="300" class="group bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-50 hover:-translate-y-1 flex flex-col overflow-hidden">
+                <div class="servicio-card-media bg-gradient-to-br from-orange-100 to-orange-50">
+                    <picture>
+                        <source srcset="assets/servicios/lesiones-deportivas.webp" type="image/webp">
+                        <img src="assets/servicios/lesiones-deportivas.jpg" alt="Lesiones Deportivas" class="servicio-card-img servicio-card-img--lesiones" width="1024" height="683" loading="lazy" onerror="this.style.display='none'">
+                    </picture>
+                </div>
+                <div class="relative">
+                    <div class="absolute left-1/2 -translate-x-1/2 -top-8 w-16 h-16 flex items-center justify-center rounded-full bg-white text-primary-teal group-hover:bg-primary-teal group-hover:text-white text-2xl shadow-lg transition-colors duration-300">
+                        <i class="fas fa-running"></i>
+                    </div>
+                </div>
+                <div class="p-6 pt-12 flex flex-col flex-1">
+                    <h3 class="text-lg font-bold mb-2 text-gray-800 text-center">Lesiones Deportivas</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed flex-1 text-center">Readaptación funcional para volver a la práctica deportiva con seguridad y rendimiento.</p>
+                </div>
+            </div>
+
+            <!-- Servicio 5: Rehabilitación postquirúrgica -->
+            <div data-aos="fade-up" data-aos-delay="400" class="group bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-50 hover:-translate-y-1 flex flex-col overflow-hidden">
+                <div class="servicio-card-media bg-gradient-to-br from-teal-100 to-teal-50">
+                    <picture>
+                        <source srcset="assets/servicios/postquirurgica.webp" type="image/webp">
+                        <img src="assets/servicios/postquirurgica.jpg" alt="Rehabilitación Postquirúrgica" class="servicio-card-img servicio-card-img--postquirurgica" width="1024" height="683" loading="lazy" onerror="this.style.display='none'">
+                    </picture>
+                </div>
+                <div class="relative">
+                    <div class="absolute left-1/2 -translate-x-1/2 -top-8 w-16 h-16 flex items-center justify-center rounded-full bg-white text-primary-teal group-hover:bg-primary-teal group-hover:text-white text-2xl shadow-lg transition-colors duration-300">
+                        <i class="fas fa-bandage"></i>
+                    </div>
+                </div>
+                <div class="p-6 pt-12 flex flex-col flex-1">
+                    <h3 class="text-lg font-bold mb-2 text-gray-800 text-center">Rehabilitación Postquirúrgica</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed flex-1 text-center">Acompañamiento integral tras una cirugía para recuperar la movilidad y funcionalidad.</p>
+                </div>
+            </div>
+
+            <!-- Servicio 6: Fisioterapia a domicilio -->
+            <div data-aos="fade-up" data-aos-delay="500" class="group bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-50 hover:-translate-y-1 flex flex-col overflow-hidden">
+                <div class="servicio-card-media bg-gradient-to-br from-green-100 to-green-50">
+                    <picture>
+                        <source srcset="assets/servicios/domicilio.webp" type="image/webp">
+                        <img src="assets/servicios/domicilio.jpg" alt="Fisioterapia a Domicilio" class="servicio-card-img servicio-card-img--domicilio" width="1024" height="683" loading="lazy" onerror="this.style.display='none'">
+                    </picture>
+                </div>
+                <div class="relative">
+                    <div class="absolute left-1/2 -translate-x-1/2 -top-8 w-16 h-16 flex items-center justify-center rounded-full bg-white text-primary-teal group-hover:bg-primary-teal group-hover:text-white text-2xl shadow-lg transition-colors duration-300">
+                        <i class="fas fa-house-medical"></i>
+                    </div>
+                </div>
+                <div class="p-6 pt-12 flex flex-col flex-1">
+                    <h3 class="text-lg font-bold mb-2 text-gray-800 text-center">Fisioterapia a Domicilio</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed flex-1 text-center">Llevamos la consulta a tu hogar para tu máxima comodidad y bienestar.</p>
+                </div>
+            </div>
+
+            <!-- Servicio 7: Nutrición (eliminado - se muestra en 'Otros servicios') -->
+        </div>
+
+        <!-- Otros servicios (servicios asociados) -->
+        <div class="mt-12">
+            <div class="text-center mb-6">
+                <div class="flex items-center justify-center gap-3 mb-3">
+                    <span class="w-12 h-px bg-primary-teal/30 rounded"></span>
+                    <h3 data-aos="fade-up" class="text-2xl font-semibold text-text-dark">Otros servicios</h3>
+                    <span class="w-12 h-px bg-primary-teal/30 rounded"></span>
+                </div>
+                <p data-aos="fade-up" class="text-gray-500 text-sm max-w-2xl mx-auto">Servicios asociados y colaboraciones profesionales que complementan nuestra oferta de fisioterapia</p>
+            </div>
+
+            <div data-aos="fade-up" class="flex justify-center px-4 sm:px-0">
+                <div class="group bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-primary-teal/20 flex flex-col overflow-hidden max-w-md w-full">
+                    <div class="servicio-card-media bg-gradient-to-br from-emerald-100 to-emerald-50">
+                        <picture>
+                            <source srcset="assets/servicios/nutricion.webp" type="image/webp">
+                            <img src="assets/servicios/nutricion.jpg" alt="Nutricionista" class="servicio-card-img servicio-card-img--nutricion" width="1024" height="683" loading="lazy" onerror="this.style.display='none'">
+                        </picture>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute left-1/2 -translate-x-1/2 -top-8 w-16 h-16 flex items-center justify-center rounded-full bg-white text-primary-teal group-hover:bg-primary-teal group-hover:text-white text-2xl shadow-lg transition-colors duration-300">
+                            <i class="fas fa-apple-alt"></i>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-12 flex flex-col flex-1">
+                        <h4 class="text-base font-semibold text-gray-800 text-center mb-2">Nutricionista <span class="text-primary-teal text-sm font-medium">(servicio asociado)</span></h4>
+                        <p class="text-sm text-gray-600 text-center flex-1">Asesoramiento nutricional integrado con la fisioterapia: planes personalizados, nutrición deportiva, patologías digestivas y seguimiento online.</p>
+                        <div class="mt-4 text-center">
+                            <a href="https://gemamartinnutricionista.com/" target="_blank" rel="noopener noreferrer" class="inline-block text-primary-teal py-1 px-3 rounded-full border border-primary-teal text-sm font-medium hover:bg-primary-teal/5 transition">Más info</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA para servicios completos -->
+        <div class="text-center mt-12" data-aos="fade-up">
+            <p class="text-gray-600 mb-4">
+                ¿Quieres ver horarios, bonos y más detalles?
+            </p>
+            <a href="servicios-completos.html" class="inline-flex items-center gap-2 bg-primary-teal text-white py-3 px-8 rounded-full font-semibold shadow-lg hover:bg-primary-teal-dark transition duration-300">
+                Ver Información Completa
+                <i class="fas fa-arrow-right text-sm"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     SECCIÓN EQUIPO
+     ============================================ -->
+<section id="equipo" class="py-16 sm:py-24 bg-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+            
+            <!-- Imagen del Equipo -->
+            <div data-aos="fade-right" class="w-full lg:w-1/2 relative group">
+                <div class="absolute -inset-4 bg-primary-teal/20 rounded-2xl transform rotate-3 scale-95 group-hover:rotate-1 transition-transform duration-500"></div>
+                <img src="assets/equipo.jpg" alt="Equipo A2 Fisioterapia" class="relative rounded-2xl shadow-xl w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-[1.01]" width="600" height="400" loading="lazy">
+            </div>
+
+            <!-- Contenido de Texto -->
+            <div class="w-full lg:w-1/2">
+                <h2 data-aos="fade-down" class="text-3xl sm:text-4xl font-extrabold text-text-dark mb-6">
+                    Nuestro Equipo
+                </h2>
+                
+                <div class="prose prose-lg text-gray-600 mb-8">
+                    <p data-aos="fade-up" data-aos-delay="100" class="font-medium text-xl text-primary-teal mb-4">
+                        Detrás de A2 Fisioterapia estamos dos fisioterapeutas con muchas ganas de acompañarte en tu recuperación
+                    </p>
+                    
+                    <p data-aos="fade-up" data-aos-delay="200" class="leading-relaxed">
+                        Creemos en una fisioterapia cercana, personalizada y basada en un buen razonamiento clínico, adaptada a cada persona y a cada lesión. Tu bienestar es nuestra prioridad y trabajamos día a día para ofrecerte las mejores soluciones.
+                    </p>
+                </div>
+
+                <!-- Bloque de Formación Rediseñado -->
+                <div data-aos="fade-up" data-aos-delay="300" class="mt-8">
+                    <h3 class="text-xl font-bold text-text-dark mb-6 flex items-center border-b border-gray-100 pb-3">
+                        <div class="bg-primary-teal text-white w-8 h-8 rounded-lg flex items-center justify-center mr-3 shadow-md">
+                            <i class="fas fa-graduation-cap text-xs"></i>
+                        </div>
+                        Formación Especializada
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Item 1 -->
+                        <div class="group bg-white p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:border-primary-teal/30 transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-primary-teal/5 flex items-center justify-center mr-3 text-primary-teal group-hover:bg-primary-teal group-hover:text-white transition-colors duration-300">
+                                    <i class="fas fa-university text-sm"></i>
+                                </div>
+                                <span class="font-medium text-gray-700 text-sm">Grado en Fisioterapia</span>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="group bg-white p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:border-primary-teal/30 transition-all duration-300 transform hover:-translate-y-1">
+                             <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-primary-teal/5 flex items-center justify-center mr-3 text-primary-teal group-hover:bg-primary-teal group-hover:text-white transition-colors duration-300">
+                                    <i class="fas fa-child text-sm"></i>
+                                </div>
+                                <span class="font-medium text-gray-700 text-sm">Pilates suelo y máquinas</span>
+                            </div>
+                        </div>
+
+                         <!-- Item 3 -->
+                        <div class="group bg-white p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:border-primary-teal/30 transition-all duration-300 transform hover:-translate-y-1">
+                             <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-primary-teal/5 flex items-center justify-center mr-3 text-primary-teal group-hover:bg-primary-teal group-hover:text-white transition-colors duration-300">
+                                    <i class="fas fa-wave-square text-sm"></i>
+                                </div>
+                                <span class="font-medium text-gray-700 text-sm">Ecografía musculoesquelética</span>
+                            </div>
+                        </div>
+
+                         <!-- Item 4 -->
+                        <div class="group bg-white p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:border-primary-teal/30 transition-all duration-300 transform hover:-translate-y-1">
+                             <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-primary-teal/5 flex items-center justify-center mr-3 text-primary-teal group-hover:bg-primary-teal group-hover:text-white transition-colors duration-300">
+                                    <i class="fas fa-syringe text-sm"></i>
+                                </div>
+                                <span class="font-medium text-gray-700 text-sm">Fisioterapia Invasiva</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Botón CTA opcional (o firma) -->
+                <div data-aos="fade-up" data-aos-delay="400" class="mt-8 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
+                    <a href="servicios-completos.html#tecnologia" class="text-primary-teal font-bold hover:text-primary-teal-dark transition flex items-center gap-2 group">
+                        Ver toda la tecnología
+                        <i class="fas fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <a href="#contacto" class="text-gray-600 font-semibold hover:text-primary-teal transition flex items-center gap-2 group">
+                        Ven a conocernos
+                        <i class="fas fa-arrow-right transform group-hover:translate-x-1 transition-transform text-sm"></i>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     SERVICIO COMPLEMENTARIO - NUTRICIONISTA
+     ============================================ -->
+<section id="nutricionista" class="py-8 sm:py-12 bg-gray-50 border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+            
+            <!-- Contenido Nutricionista simplificado -->
+            <div class="w-full lg:w-1/2">
+                <h3 data-aos="fade-down" class="text-2xl font-bold text-text-dark mb-2">Tu Nutricionista en A2</h3>
+                <p data-aos="fade-up" class="text-gray-600 mb-4 text-sm">Asesoramiento nutricional integrado con la fisioterapia: planes personalizados, nutrición deportiva, abordaje de patologías digestivas y seguimiento online. Incluye valoración inicial, análisis de composición corporal (bioimpedancia) y seguimiento periódico presencial u online según tus necesidades.</p>
+
+                <!-- Boxes compactos igual estilo Formación Especializada -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div data-aos="fade-up" data-aos-delay="100" class="group bg-white p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:border-primary-teal/30 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-primary-teal/5 flex items-center justify-center mr-3 text-primary-teal group-hover:bg-primary-teal group-hover:text-white transition-colors duration-300">
+                                <i class="fas fa-weight-scale text-sm"></i>
+                            </div>
+                            <span class="text-sm font-medium text-gray-700">Pérdida de grasa</span>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-delay="150" class="group bg-white p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:border-primary-teal/30 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-primary-teal/5 flex items-center justify-center mr-3 text-primary-teal group-hover:bg-primary-teal group-hover:text-white transition-colors duration-300">
+                                <i class="fas fa-dumbbell text-sm"></i>
+                            </div>
+                            <span class="text-sm font-medium text-gray-700">Nutrición deportiva</span>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-delay="200" class="group bg-white p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:border-primary-teal/30 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-primary-teal/5 flex items-center justify-center mr-3 text-primary-teal group-hover:bg-primary-teal group-hover:text-white transition-colors duration-300">
+                                <i class="fas fa-notes-medical text-sm"></i>
+                            </div>
+                            <span class="text-sm font-medium text-gray-700">Patologías digestivas</span>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-delay="250" class="group bg-white p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:border-primary-teal/30 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-primary-teal/5 flex items-center justify-center mr-3 text-primary-teal group-hover:bg-primary-teal group-hover:text-white transition-colors duration-300">
+                                <i class="fas fa-laptop-medical text-sm"></i>
+                            </div>
+                            <span class="text-sm font-medium text-gray-700">Reeducación alimentaria</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA reducido -->
+                <div data-aos="fade-up" data-aos-delay="400" class="mt-6 mb-8">
+                    <a href="#contacto" class="text-primary-teal font-semibold hover:underline text-sm">Contactar</a>
+                    <span class="mx-3 text-gray-400">·</span>
+                    <a href="https://gemamartinnutricionista.com/" target="_blank" class="text-gray-600 text-sm hover:underline">Más info</a>
+                </div>
+            </div>
+
+            <!-- Imagen Nutricionista - Derecha con estilo de equipo, más pequeña -->
+                <div data-aos="fade-left" class="w-full lg:w-1/2 relative group flex justify-center lg:justify-end">
+                    <div class="relative w-72 h-80">
+                        <div class="absolute -inset-3 bg-primary-teal/20 rounded-2xl transform rotate-3 scale-95 group-hover:rotate-1 transition-transform duration-500"></div>
+                        <img src="assets/gema_martin.jpg" alt="Nutricionista especializada" class="relative rounded-2xl shadow-xl w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-[1.01]" loading="lazy">
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     INSTALACIONES - Grid + lightbox
+     ============================================ -->
+<section id="instalaciones" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold text-text-dark mb-4">
+                Nuestras <span class="text-primary-teal">Instalaciones</span>
+            </h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                Descubre nuestro moderno centro equipado con la última tecnología para tu recuperación y bienestar
+            </p>
+        </div>
+
+        <!-- Vista previa: 6 fotos destacadas -->
+        <div class="instalaciones-gallery" data-aos="fade-up" data-aos-delay="100">
+            <div class="instalaciones-grid" role="list">
+                <button type="button" class="instalaciones-grid-item" data-gallery-index="0" role="listitem"
+                        aria-label="Ampliar: sala de espera">
+                    <picture>
+                        <source srcset="assets/instalaciones/instalaciones1.webp" type="image/webp">
+                        <img src="assets/instalaciones/instalaciones1.jpeg" alt="" width="1512" height="1210" loading="eager" decoding="async" draggable="false">
+                    </picture>
+                </button>
+                <button type="button" class="instalaciones-grid-item" data-gallery-index="1" role="listitem"
+                        aria-label="Ampliar: sala de pilates">
+                    <picture>
+                        <source srcset="assets/instalaciones/instalaciones2.webp" type="image/webp">
+                        <img src="assets/instalaciones/instalaciones2.jpeg" alt="" width="1512" height="1210" loading="lazy" decoding="async" draggable="false">
+                    </picture>
+                </button>
+                <button type="button" class="instalaciones-grid-item" data-gallery-index="2" role="listitem"
+                        aria-label="Ampliar: cabina de tratamiento">
+                    <picture>
+                        <source srcset="assets/instalaciones/instalaciones3.webp" type="image/webp">
+                        <img src="assets/instalaciones/instalaciones3.jpeg" alt="" width="1512" height="1210" loading="lazy" decoding="async" draggable="false">
+                    </picture>
+                </button>
+                <button type="button" class="instalaciones-grid-item" data-gallery-index="9" role="listitem"
+                        aria-label="Ampliar: logotipo en recepción">
+                    <picture>
+                        <source srcset="assets/instalaciones/instalaciones10.webp" type="image/webp">
+                        <img src="assets/instalaciones/instalaciones10.jpeg" alt="" width="1024" height="683" loading="lazy" decoding="async" draggable="false">
+                    </picture>
+                </button>
+                <button type="button" class="instalaciones-grid-item" data-gallery-index="8" role="listitem"
+                        aria-label="Ampliar: recepción">
+                    <picture>
+                        <source srcset="assets/instalaciones/instalaciones9.webp" type="image/webp">
+                        <img src="assets/instalaciones/instalaciones9.jpeg" alt="" width="1512" height="1210" loading="lazy" decoding="async" draggable="false">
+                    </picture>
+                </button>
+                <button type="button" class="instalaciones-grid-item" data-gallery-index="11" role="listitem"
+                        aria-label="Ampliar: modelos anatómicos">
+                    <picture>
+                        <source srcset="assets/instalaciones/instalaciones12.webp" type="image/webp">
+                        <img src="assets/instalaciones/instalaciones12.jpeg" alt="" width="1024" height="683" loading="lazy" decoding="async" draggable="false">
+                    </picture>
+                </button>
+            </div>
+
+            <p class="instalaciones-gallery-cta">
+                <button type="button" class="instalaciones-gallery-all" data-gallery-index="0">
+                    Ver galería completa
+                    <span class="instalaciones-gallery-all-count">12 fotos</span>
+                </button>
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 max-w-5xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+            <div class="text-center p-6 bg-gray-50 rounded-lg">
+                <i class="fas fa-check-circle text-4xl text-primary-teal mb-3"></i>
+                <h3 class="font-semibold text-lg mb-2">Instalaciones Modernas</h3>
+                <p class="text-gray-600 text-sm">Equipadas con la última tecnología en fisioterapia</p>
+            </div>
+            <div class="text-center p-6 bg-gray-50 rounded-lg">
+                <i class="fas fa-dumbbell text-4xl text-primary-teal mb-3"></i>
+                <h3 class="font-semibold text-lg mb-2">Sala de Pilates</h3>
+                <p class="text-gray-600 text-sm">Espacio dedicado con máquinas especializadas</p>
+            </div>
+            <div class="text-center p-6 bg-gray-50 rounded-lg">
+                <i class="fas fa-heart text-4xl text-primary-teal mb-3"></i>
+                <h3 class="font-semibold text-lg mb-2">Ambiente Acogedor</h3>
+                <p class="text-gray-600 text-sm">Diseñado para tu comodidad y recuperación</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox: las 12 fotos en carrusel -->
+    <div id="instalaciones-lightbox" class="instalaciones-lightbox hidden" role="dialog" aria-modal="true" aria-label="Galería de instalaciones" aria-hidden="true">
+        <button type="button" class="instalaciones-lightbox-close" aria-label="Cerrar galería">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M6 6 L18 18 M18 6 L6 18"/></svg>
+        </button>
+
+        <p class="instalaciones-lightbox-counter" aria-live="polite">
+            <span class="is-current">01</span><span class="is-sep" aria-hidden="true">/</span><span class="is-total">12</span>
+        </p>
+
+        <div class="instalaciones-lightbox-stage">
+            <button type="button" class="instalaciones-lightbox-arrow instalaciones-lightbox-prev" aria-label="Foto anterior">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5 L8 12 L15 19"/></svg>
+            </button>
+
+            <div class="swiper instalaciones-lightbox-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="assets/instalaciones/instalaciones1.webp" type="image/webp">
+                            <img src="assets/instalaciones/instalaciones1.jpeg" alt="Sala de espera con sillas y el logotipo de A2 Fisioterapia" class="instalaciones-lightbox-img" width="1512" height="1210" decoding="async" draggable="false">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="assets/instalaciones/instalaciones2.webp" type="image/webp">
+                            <img src="assets/instalaciones/instalaciones2.jpeg" alt="Sala de pilates con springboards, fitballs y material de ejercicio" class="instalaciones-lightbox-img" width="1512" height="1210" decoding="async" draggable="false">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="assets/instalaciones/instalaciones3.webp" type="image/webp">
+                            <img src="assets/instalaciones/instalaciones3.jpeg" alt="Cabina de tratamiento con camilla, ecógrafo y equipo de electroterapia" class="instalaciones-lightbox-img" width="1512" height="1210" decoding="async" draggable="false">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="assets/instalaciones/instalaciones4.webp" type="image/webp">
+                            <img src="assets/instalaciones/instalaciones4.jpeg" alt="Detalle de los springboards y las fitballs de la sala de pilates" class="instalaciones-lightbox-img" width="1512" height="1210" decoding="async" draggable="false">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="assets/instalaciones/instalaciones5.webp" type="image/webp">
+                            <img src="assets/instalaciones/instalaciones5.jpeg" alt="Cabina de tratamiento con camilla, zona de consulta y material terapéutico" class="instalaciones-lightbox-img" width="1512" height="1210" decoding="async" draggable="false">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="assets/instalaciones/instalaciones6.webp" type="image/webp">
+                            <img src="assets/instalaciones/instalaciones6.jpeg" alt="Equipo de electroterapia Globus sobre un carro auxiliar" class="instalaciones-lightbox-img" width="1512" height="1210" decoding="async" draggable="false">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="assets/instalaciones/instalaciones7.webp" type="image/webp">
+                            <img src="assets/instalaciones/instalaciones7.jpeg" alt="Ecógrafo Chison del centro" class="instalaciones-lightbox-img" width="1512" height="1210" decoding="async" draggable="false">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="assets/instalaciones/instalaciones8.webp" type="image/webp">
+                            <img src="assets/instalaciones/instalaciones8.jpeg" alt="Despacho de consulta con mesa y sillas" class="instalaciones-lightbox-img" width="1512" height="1210" decoding="async" draggable="false">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="assets/instalaciones/instalaciones9.webp" type="image/webp">
+                            <img src="assets/instalaciones/instalaciones9.jpeg" alt="Recepción del centro con el mostrador de madera" class="instalaciones-lightbox-img" width="1512" height="1210" decoding="async" draggable="false">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="assets/instalaciones/instalaciones10.webp" type="image/webp">
+                            <img src="assets/instalaciones/instalaciones10.jpeg" alt="Logotipo de A2 Fisioterapia en la pared de recepción, junto al listado de servicios" class="instalaciones-lightbox-img" width="1024" height="683" decoding="async" draggable="false">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="assets/instalaciones/instalaciones11.webp" type="image/webp">
+                            <img src="assets/instalaciones/instalaciones11.jpeg" alt="Tarjetas del centro en el mostrador de recepción" class="instalaciones-lightbox-img" width="1024" height="683" decoding="async" draggable="false">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="assets/instalaciones/instalaciones12.webp" type="image/webp">
+                            <img src="assets/instalaciones/instalaciones12.jpeg" alt="Modelos anatómicos de columna, pelvis y hombro junto a la ventana" class="instalaciones-lightbox-img" width="1024" height="683" decoding="async" draggable="false">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="instalaciones-lightbox-arrow instalaciones-lightbox-next" aria-label="Foto siguiente">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5 L16 12 L9 19"/></svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     CONVENIOS
+     ============================================ -->
+<section id="convenios" class="py-16 sm:py-20 bg-gradient-to-br from-purple-50 via-white to-purple-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-text-dark mb-4">Colaboramos con Clubs y Asociaciones</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                Ofrecemos acuerdos especiales para clubs deportivos y asociaciones locales, apoyando la salud y bienestar de nuestra comunidad.
+            </p>
+        </div>
+
+        <div class="flex flex-wrap justify-center items-center gap-8 sm:gap-12 mb-8">
+            <!-- Club Balonmano -->
+            <div class="flex flex-col items-center justify-center group" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-primary-teal w-64">
+                    <div class="flex justify-center mb-3">
+                    <picture>
+                        <source srcset="assets/convenios/balonmano.webp" type="image/webp">
+                        <img src="assets/convenios/balonmano.png" alt="Club Balonmano Bolaños" class="h-20 w-auto object-contain transition-all duration-300" width="80" height="80" loading="lazy">
+                    </picture>
+                    </div>
+                    <p class="text-sm font-semibold text-gray-700 text-center">Club Balonmano Bolaños</p>
+                </div>
+            </div>
+
+            <!-- Club Atletismo -->
+            <div class="flex flex-col items-center justify-center group" data-aos="fade-up" data-aos-delay="150">
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-primary-teal w-64">
+                    <div class="flex justify-center mb-3">
+                    <picture>
+                        <source srcset="assets/convenios/atletismo.webp" type="image/webp">
+                        <img src="assets/convenios/atletismo.png" alt="Club Atletismo Bolaños" class="h-20 w-auto object-contain transition-all duration-300" width="80" height="80" loading="lazy">
+                    </picture>
+                    </div>
+                    <p class="text-sm font-semibold text-gray-700 text-center">Club Atletismo Bolaños</p>
+                </div>
+            </div>
+
+            <!-- Asociación Oramfys -->
+            <div class="flex flex-col items-center justify-center group" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-primary-teal w-64">
+                    <div class="flex justify-center mb-3">
+                    <picture>
+                        <source srcset="assets/convenios/Oramfys.webp" type="image/webp">
+                        <img src="assets/convenios/Oramfys.png" alt="Asociación de Discapacitados Oramfys" class="h-20 w-auto object-contain transition-all duration-300" width="80" height="80" loading="lazy">
+                    </picture>
+                    </div>
+                    <p class="text-sm font-semibold text-gray-700 text-center">Asociación de<br>Discapacitados Oramfys</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA para más convenios -->
+        <div class="text-center mt-8" data-aos="fade-up" data-aos-delay="300">
+            <p class="text-gray-600 mb-4">¿Tu club o asociación está interesado en un convenio?</p>
+            <a href="#contacto" class="inline-flex items-center gap-2 bg-primary-teal text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-primary-teal-dark transition duration-300 hover:scale-105">
+                <i class="fas fa-handshake"></i>
+                Solicitar Información
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     SECCIÓN CONTACTO Y UBICACIÓN
+     ============================================ -->
+<section id="contacto" class="py-16 sm:py-24 bg-primary-teal text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 data-aos="fade-down" class="text-4xl font-extrabold text-center mb-12">
+            ¿Listo para empezar tu recuperación?
+        </h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Formulario de Contacto -->
+            <div data-aos="fade-right" data-aos-delay="200" class="bg-white p-8 rounded-xl shadow-2xl text-text-dark">
+                <h3 class="text-2xl font-bold mb-4">Solicita tu Cita y Actívate</h3>
+                <form>
+                    <div class="mb-4">
+                        <label for="nombre" class="block text-sm font-medium mb-1">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary-teal focus:border-primary-teal" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="servicio" class="block text-sm font-medium mb-1">Servicio de Interés</label>
+                            <select id="servicio" name="servicio" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary-teal focus:border-primary-teal bg-white" required>
+                            <option value="" disabled selected>Selecciona un servicio</option>
+                            <option value="Tratamiento Personalizado">Tratamiento Personalizado</option>
+                            <option value="Pilates">Pilates (Suelo y Máquinas)</option>
+                            <option value="Pilates individual / Ejercicio terapeútico">Pilates individual / Ejercicio terapeútico</option>
+                            <option value="Lesiones Deportivas">Lesiones Deportivas</option>
+                            <option value="Fisioterapia General">Fisioterapia General</option>
+                            <option value="Domicilio">Fisioterapia a Domicilio</option>
+                            <option value="Nutricionista">Nutricionista (servicio asociado)</option>
+                            <option value="Convenios">Convenios (Clubes/Asociaciones)</option>
+                            <option value="Otro">Otro / Información General</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="motivo" class="block text-sm font-medium mb-1">Motivo de la Consulta (Breve)</label>
+                        <textarea id="motivo" name="motivo" rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary-teal focus:border-primary-teal" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-primary-teal text-white py-3 rounded-xl font-bold text-lg shadow-xl hover:bg-primary-teal-dark transition duration-300 hover:-translate-y-1">
+                        Enviar Solicitud
+                    </button>
+                </form>
+            </div>
+
+            <!-- Información de Contacto y Ubicación -->
+            <div data-aos="fade-left" data-aos-delay="200" class="flex flex-col space-y-8">
+                <!-- Mapa -->
+                <div class="bg-white h-64 rounded-xl shadow-2xl overflow-hidden">
+                    <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3104.6375782489836!2d-3.6631291242503354!3d38.9094023717214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd695de8ee59e237%3A0xadbab6eb67a8387c!2sCl%C3%ADnica%20A2%20Fisioterapia!5e0!3m2!1ses!2ses!4v1768340040788!5m2!1ses!2ses"
+                    class="w-full h-full"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Ubicación de A2 Fisioterapia en Google Maps">
+                    </iframe>
+                </div>
+
+                <!-- Detalles de Contacto -->
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-4">
+                        <span class="text-white text-2xl w-10 text-center flex-shrink-0"><i class="fas fa-map-marker-alt"></i></span>
+                        <div>
+                            <h4 class="text-xs uppercase tracking-widest text-white/60 mb-1">Dirección</h4>
+                            <p class="text-lg font-medium text-white leading-tight">C. Sancho Panza, 9, 13260 Bolaños de Calatrava, Ciudad Real</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <span class="text-white text-2xl w-10 text-center flex-shrink-0"><i class="fas fa-phone-alt"></i></span>
+                        <div>
+                            <h4 class="text-xs uppercase tracking-widest text-white/60 mb-1">Teléfono</h4>
+                            <a href="tel:+34643567201" class="text-lg font-medium text-white hover:text-white/80 transition">+34 643 567 201</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <span class="text-white text-2xl w-10 text-center flex-shrink-0"><i class="fas fa-clock"></i></span>
+                        <div>
+                            <h4 class="text-xs uppercase tracking-widest text-white/60 mb-1">Horario</h4>
+                            <p class="text-lg font-medium text-white">Lunes a Jueves: 9:00 - 21:00</p>
+                            <p class="text-lg font-medium text-white">Viernes: 8:00 - 19:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
     </main>
-    
-    <!-- Contenedor para el footer -->
-    <div id="footer-placeholder"></div>
-    
-    <!-- Contenedor para el modal -->
-    <div id="modal-placeholder"></div>
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="bg-gray-800 text-white py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <!-- Columna 1: Logo y redes sociales -->
+            <div data-aos="fade-up" class="flex flex-col items-center text-center">
+                <!-- Logo con filtro para ajustar al color exacto de accent-orange (#6a3a88) -->
+                <picture>
+                    <source srcset="assets/logo.webp" type="image/webp">
+                    <img src="assets/logo.png" alt="A2 Fisioterapia" class="h-20 w-auto mb-3" width="80" height="80" style="filter: brightness(0) saturate(100%) invert(24%) sepia(34%) saturate(1636%) hue-rotate(233deg) brightness(98%) contrast(92%);">
+                </picture>
+                <div class="flex space-x-4 mt-4 justify-center">
+                    <!-- Facebook oculto hasta que tengan cuenta
+                    <a href="https://www.facebook.com/a2fisioterapia" class="text-gray-400 hover:text-primary-teal transition duration-300" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook-f fa-2x"></i>
+                    </a>
+                    -->
+                    <a href="https://www.instagram.com/a2fisioterapia_/" class="text-gray-400 hover:text-primary-teal transition duration-300" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                    <a href="#" data-whatsapp-link class="text-gray-400 hover:text-primary-teal transition duration-300" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Columna 2: Navegación -->
+            <div data-aos="fade-up" data-aos-delay="100">
+                <h4 class="font-semibold mb-3 text-primary-teal">Navegación</h4>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><a href="index.html#hero" class="hover:text-white transition">Inicio</a></li>
+                    <li><a href="index.html#servicios" class="hover:text-white transition">Servicios</a></li>
+                    <li><a href="index.html#equipo" class="hover:text-white transition">Equipo</a></li>
+                    <li><a href="index.html#instalaciones" class="hover:text-white transition">Instalaciones</a></li>
+                    <li><a href="index.html#convenios" class="hover:text-white transition">Convenios</a></li>
+                    <li><a href="index.html#contacto" class="hover:text-white transition">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Información legal -->
+            <div data-aos="fade-up" data-aos-delay="200">
+                <h4 class="font-semibold mb-3 text-primary-teal">Legal</h4>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><a href="aviso-legal.html" class="hover:text-white transition">Aviso Legal</a></li>
+                    <li><a href="politica-privacidad.html" class="hover:text-white transition">Política de Privacidad</a></li>
+                    <li><a href="politica-cookies.html" class="hover:text-white transition">Política de Cookies</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 4: Contacto rápido -->
+            <div data-aos="fade-up" data-aos-delay="300">
+                <h4 class="font-semibold mb-3 text-primary-teal">Llámanos</h4>
+                <p class="text-sm text-gray-400">¿Tienes dudas o quieres agendar por teléfono?</p>
+                <a href="tel:+34643567201" class="text-base md:text-xl font-bold text-accent-orange mt-2 block hover:opacity-80 transition whitespace-nowrap focus:outline-none" style="-webkit-tap-highlight-color: transparent;">+34 643 567 201</a>
+                <a href="mailto:a2fisioterapia01@gmail.com" class="text-xs md:text-sm text-gray-400 mt-2 block hover:text-white transition whitespace-nowrap focus:outline-none" style="-webkit-tap-highlight-color: transparent;">a2fisioterapia01@gmail.com</a>
+            </div>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-gray-700 flex flex-col md:flex-row justify-center items-center gap-4 text-gray-400 text-sm">
+            <p>&copy; 2026 A2 Fisioterapia. Todos los derechos reservados.</p>
+            
+            <a href="https://gvraul.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 opacity-30 hover:opacity-100 transition duration-300 focus:outline-none" style="-webkit-tap-highlight-color: transparent;">
+                <span class="text-xs">Desarrollado por</span>
+                <picture>
+                    <source srcset="assets/logo-rgv.webp" type="image/webp">
+                    <img src="assets/logo-rgv.png" alt="GV" class="h-4 w-auto rounded-sm">
+                </picture>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<!-- ============================================
+     MODAL DE CONFIRMACIÓN
+     ============================================ -->
+<div id="confirmation-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-[100]">
+    <div class="bg-white p-6 rounded-lg shadow-xl max-w-sm w-full text-center">
+        <h3 class="text-2xl font-bold text-primary-teal mb-3">¡Solicitud Enviada!</h3>
+        <p class="text-gray-700 mb-4">Gracias por contactarnos. Estás a un paso de <strong>avanzar y activarte</strong>. Nuestro equipo resolverá tus dudas tan pronto como sea posible.</p>
+        <button onclick="closeConfirmationModal()" class="bg-primary-teal text-white py-2 px-6 rounded-xl shadow-lg hover:bg-primary-teal-dark transition duration-300 hover:-translate-y-1">Aceptar</button>
+    </div>
+</div>
+
 
     <!-- Botón Flotante WhatsApp -->
     <a href="#" 
@@ -311,7 +1036,6 @@
     </a>
     
     <!-- Scripts optimizados con defer -->
-    <script src="sections-loader.js" defer></script>
     <script src="script.js" defer></script>
     
     <!-- Third-party scripts con defer para no bloquear el rendering -->

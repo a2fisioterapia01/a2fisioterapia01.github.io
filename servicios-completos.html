@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Descubre todos los servicios de A2 Fisioterapia: tratamientos deportivos, traumatológicos, ATM, suelo pélvico, Pilates terapéutico y bonos. Horarios y precios.">
-    <meta name="keywords" content="servicios fisioterapia, pilates terapéutico horarios, bonos fisioterapia, tratamientos bolaños, fisioterapia deportiva">
+    <meta name="keywords" content="servicios fisioterapia, pilates terapéutico horarios, bonos fisioterapia, tratamientos bolaños, fisioterapia deportiva, presoterapia, Cryopush, ecografía, EPI">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://a2fisioterapia.com/servicios-completos.html">
     
@@ -229,8 +229,8 @@
                 
                 <!-- Servicio 1 -->
                 <div class="group bg-white rounded-2xl shadow-lg border border-gray-50 overflow-hidden hover:shadow-xl transition-all duration-300">
-                    <div class="relative h-48 bg-gradient-to-br from-purple-100 to-purple-50 overflow-hidden">
-                        <img src="assets/servicios/tratamientos-personalizados.jpg" alt="Tratamientos Personalizados" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'">
+                    <div class="servicio-card-media bg-gradient-to-br from-purple-100 to-purple-50">
+                        <img src="assets/servicios/tratamientos-personalizados.jpg" alt="Tratamientos Personalizados" class="servicio-card-img servicio-card-img--tratamientos" width="1024" height="683" loading="lazy" onerror="this.style.display='none'">
                     </div>
                     <div class="relative">
                         <div class="absolute left-1/2 -translate-x-1/2 -top-8 w-16 h-16 flex items-center justify-center rounded-2xl bg-white text-primary-teal group-hover:bg-primary-teal group-hover:text-white text-2xl shadow-xl transition-colors duration-300">
@@ -252,8 +252,8 @@
 
                 <!-- Servicio 2 -->
                 <div class="group bg-white rounded-2xl shadow-lg border border-gray-50 overflow-hidden hover:shadow-xl transition-all duration-300">
-                    <div id="pilates" class="relative h-48 bg-gradient-to-br from-pink-100 to-pink-50 overflow-hidden">
-                        <img src="assets/servicios/pilates.jpg" alt="Pilates Máquinas + Suelo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'">
+                    <div id="pilates" class="servicio-card-media bg-gradient-to-br from-pink-100 to-pink-50">
+                        <img src="assets/servicios/pilates.jpg" alt="Pilates Máquinas + Suelo" class="servicio-card-img servicio-card-img--pilates" width="1024" height="683" loading="lazy" onerror="this.style.display='none'">
                     </div>
                     <div class="relative">
                         <div class="absolute left-1/2 -translate-x-1/2 -top-8 w-16 h-16 flex items-center justify-center rounded-2xl bg-white text-primary-teal group-hover:bg-primary-teal group-hover:text-white text-2xl shadow-xl transition-colors duration-300">
@@ -319,34 +319,73 @@
                     </div>
                 </div>
 
-                <!-- Servicio 3 -->
-                <div class="group bg-white rounded-2xl shadow-lg border border-gray-50 overflow-hidden hover:shadow-xl transition-all duration-300">
-                    <div class="relative h-48 bg-gradient-to-br from-blue-100 to-blue-50 overflow-hidden">
-                        <img src="assets/servicios/tecnologia.jpg" alt="Tecnología Avanzada" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'">
+                <!-- Servicio 3: Tecnología avanzada -->
+                <div id="tecnologia" class="lg:col-span-2 scroll-mt-28 group relative">
+                    <div class="tecnologia-split-icon hidden lg:flex absolute left-[42%] top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-16 h-16 items-center justify-center rounded-2xl bg-white text-primary-teal group-hover:bg-primary-teal group-hover:text-white text-2xl shadow-xl transition-colors duration-300" aria-hidden="true">
+                        <i class="fas fa-wave-square"></i>
                     </div>
-                    <div class="relative">
-                        <div class="absolute left-1/2 -translate-x-1/2 -top-8 w-16 h-16 flex items-center justify-center rounded-2xl bg-white text-primary-teal group-hover:bg-primary-teal group-hover:text-white text-2xl shadow-xl transition-colors duration-300">
-                            <i class="fas fa-wave-square"></i>
+                    <div class="flex flex-col lg:flex-row lg:items-stretch bg-white rounded-2xl shadow-lg border border-gray-50 overflow-hidden hover:shadow-xl transition-all duration-300">
+                        <div class="tecnologia-split-media servicio-card-media bg-gradient-to-br from-blue-100 to-blue-50 shrink-0">
+                            <picture>
+                                <source srcset="assets/servicios/tecnologia.webp" type="image/webp">
+                                <img src="assets/servicios/tecnologia.jpg" alt="Fisioterapia invasiva y tecnología en consulta" class="servicio-card-img servicio-card-img--tecnologia" width="1024" height="683" loading="lazy" onerror="this.style.display='none'">
+                            </picture>
                         </div>
-                    </div>
-                    <div class="p-8 pt-12">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Tecnología Avanzada</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
-                            Utilizamos los últimos avances tecnológicos para optimizar tu recuperación y acelerar resultados.
-                        </p>
-                        <ul class="space-y-2 text-sm text-gray-600">
-                            <li><i class="fas fa-check text-primary-teal mr-2"></i>Ecografía terapéutica</li>
-                            <li><i class="fas fa-check text-primary-teal mr-2"></i>Neuromodulación</li>
-                            <li><i class="fas fa-check text-primary-teal mr-2"></i>EPI (Electrólisis Percutánea Intratisular)</li>
-                            <li><i class="fas fa-check text-primary-teal mr-2"></i>Radiofrecuencia</li>
-                        </ul>
+                        <div class="relative shrink-0 lg:hidden">
+                            <div class="absolute left-1/2 -translate-x-1/2 -top-8 z-20 w-16 h-16 flex items-center justify-center rounded-2xl bg-white text-primary-teal group-hover:bg-primary-teal group-hover:text-white text-2xl shadow-xl transition-colors duration-300">
+                                <i class="fas fa-wave-square" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="flex-1 min-w-0 p-8 pt-12 lg:py-8 lg:pr-10 lg:pl-12">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-3">Tecnología Avanzada</h3>
+                            <p class="text-gray-600 mb-5 leading-relaxed text-sm sm:text-base">
+                                Diagnóstico, tratamiento y recuperación con equipamiento de última generación, integrado en tu plan personalizado.
+                            </p>
+                            <ul class="space-y-2 text-sm text-gray-600 mb-6">
+                                <li><i class="fas fa-check text-primary-teal mr-2" aria-hidden="true"></i>Ecografía terapéutica</li>
+                                <li><i class="fas fa-check text-primary-teal mr-2" aria-hidden="true"></i>Neuromodulación</li>
+                                <li><i class="fas fa-check text-primary-teal mr-2" aria-hidden="true"></i>EPI (Electrólisis Percutánea Intratisular)</li>
+                                <li><i class="fas fa-check text-primary-teal mr-2" aria-hidden="true"></i>Radiofrecuencia</li>
+                                <li><i class="fas fa-check text-primary-teal mr-2" aria-hidden="true"></i>Presoterapia</li>
+                                <li><i class="fas fa-check text-primary-teal mr-2" aria-hidden="true"></i>Cryopush</li>
+                            </ul>
+                            <div class="grid grid-cols-3 gap-2 sm:gap-3 max-w-md lg:max-w-none">
+                                <figure class="m-0">
+                                    <div class="tecnologia-thumb rounded-lg overflow-hidden border border-gray-100 bg-blue-50/50">
+                                        <picture>
+                                            <source srcset="assets/servicios/ecografia.webp" type="image/webp">
+                                            <img src="assets/servicios/ecografia.jpg" alt="Ecografía terapéutica en consulta" class="servicio-card-img servicio-card-img--ecografia" width="320" height="213" loading="lazy">
+                                        </picture>
+                                    </div>
+                                    <figcaption class="mt-1.5 text-[11px] sm:text-xs text-gray-500 leading-snug text-center">Ecografía</figcaption>
+                                </figure>
+                                <figure class="m-0">
+                                    <div class="tecnologia-thumb rounded-lg overflow-hidden border border-gray-100 bg-blue-50/50">
+                                        <picture>
+                                            <source srcset="assets/servicios/presoterapia.webp" type="image/webp">
+                                            <img src="assets/servicios/presoterapia.jpg" alt="Presoterapia en clínica" class="servicio-card-img servicio-card-img--presoterapia" width="320" height="213" loading="lazy">
+                                        </picture>
+                                    </div>
+                                    <figcaption class="mt-1.5 text-[11px] sm:text-xs text-gray-500 leading-snug text-center">Presoterapia</figcaption>
+                                </figure>
+                                <figure class="m-0">
+                                    <div class="tecnologia-thumb rounded-lg overflow-hidden border border-gray-100 bg-blue-50/50">
+                                        <picture>
+                                            <source srcset="assets/servicios/cryopush.webp" type="image/webp">
+                                            <img src="assets/servicios/cryopush.jpg" alt="Cryopush frío y compresión" class="servicio-card-img servicio-card-img--cryopush" width="320" height="213" loading="lazy">
+                                        </picture>
+                                    </div>
+                                    <figcaption class="mt-1.5 text-[11px] sm:text-xs text-gray-500 leading-snug text-center">Cryopush</figcaption>
+                                </figure>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Servicio 4 -->
                 <div class="group bg-white rounded-2xl shadow-lg border border-gray-50 overflow-hidden hover:shadow-xl transition-all duration-300">
-                    <div class="relative h-48 bg-gradient-to-br from-orange-100 to-orange-50 overflow-hidden">
-                        <img src="assets/servicios/lesiones-deportivas.jpg" alt="Lesiones Deportivas" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'">
+                    <div class="servicio-card-media bg-gradient-to-br from-orange-100 to-orange-50">
+                        <img src="assets/servicios/lesiones-deportivas.jpg" alt="Lesiones Deportivas" class="servicio-card-img servicio-card-img--lesiones" width="1024" height="683" loading="lazy" onerror="this.style.display='none'">
                     </div>
                     <div class="relative">
                         <div class="absolute left-1/2 -translate-x-1/2 -top-8 w-16 h-16 flex items-center justify-center rounded-2xl bg-white text-primary-teal group-hover:bg-primary-teal group-hover:text-white text-2xl shadow-xl transition-colors duration-300">
@@ -368,8 +407,8 @@
 
                 <!-- Servicio 5 -->
                 <div class="group bg-white rounded-2xl shadow-lg border border-gray-50 overflow-hidden hover:shadow-xl transition-all duration-300">
-                    <div class="relative h-48 bg-gradient-to-br from-teal-100 to-teal-50 overflow-hidden">
-                        <img src="assets/servicios/postquirurgica.jpg" alt="Rehabilitación Postquirúrgica" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'">
+                    <div class="servicio-card-media bg-gradient-to-br from-teal-100 to-teal-50">
+                        <img src="assets/servicios/postquirurgica.jpg" alt="Rehabilitación Postquirúrgica" class="servicio-card-img servicio-card-img--postquirurgica" width="1024" height="683" loading="lazy" onerror="this.style.display='none'">
                     </div>
                     <div class="relative">
                         <div class="absolute left-1/2 -translate-x-1/2 -top-8 w-16 h-16 flex items-center justify-center rounded-2xl bg-white text-primary-teal group-hover:bg-primary-teal group-hover:text-white text-2xl shadow-xl transition-colors duration-300">
@@ -391,8 +430,8 @@
 
                 <!-- Servicio 6 -->
                 <div class="group bg-white rounded-2xl shadow-lg border border-gray-50 overflow-hidden hover:shadow-xl transition-all duration-300">
-                    <div class="relative h-48 bg-gradient-to-br from-green-100 to-green-50 overflow-hidden">
-                        <img src="assets/servicios/domicilio.jpg" alt="Fisioterapia a Domicilio" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'">
+                    <div class="servicio-card-media bg-gradient-to-br from-green-100 to-green-50">
+                        <img src="assets/servicios/domicilio.jpg" alt="Fisioterapia a Domicilio" class="servicio-card-img servicio-card-img--domicilio" width="1024" height="683" loading="lazy" onerror="this.style.display='none'">
                     </div>
                     <div class="relative">
                         <div class="absolute left-1/2 -translate-x-1/2 -top-8 w-16 h-16 flex items-center justify-center rounded-2xl bg-white text-primary-teal group-hover:bg-primary-teal group-hover:text-white text-2xl shadow-xl transition-colors duration-300">
@@ -414,8 +453,8 @@
 
                 <!-- Servicio 7: Nutrición -->
                 <div class="group bg-white rounded-2xl shadow-lg border-2 border-primary-teal overflow-hidden hover:shadow-xl transition-all duration-300">
-                    <div class="relative h-48 bg-gradient-to-br from-emerald-100 to-emerald-50 overflow-hidden">
-                        <img src="assets/servicios/nutricion.jpg" alt="Nutrición" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'">
+                    <div class="servicio-card-media bg-gradient-to-br from-emerald-100 to-emerald-50">
+                        <img src="assets/servicios/nutricion.jpg" alt="Nutrición" class="servicio-card-img servicio-card-img--nutricion" width="1024" height="683" loading="lazy" onerror="this.style.display='none'">
                     </div>
                     <div class="relative">
                         <div class="absolute left-1/2 -translate-x-1/2 -top-8 w-16 h-16 flex items-center justify-center rounded-2xl bg-white text-primary-teal group-hover:bg-primary-teal group-hover:text-white text-2xl shadow-xl transition-colors duration-300">
