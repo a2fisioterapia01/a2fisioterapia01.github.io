@@ -1,4 +1,5 @@
-/* Configuración de Tailwind CSS - A2 Fisioterapia (OPTIMIZADO) */
+/* Ya no se carga en la web. Los colores viven en tailwind.config.js
+   y el CSS que sirve la página es tailwind.css (npm run build:css). */
 tailwind.config = {
     theme: {
         extend: {
